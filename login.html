@@ -22,13 +22,13 @@
 <div class="log-w3">
 <div class="w3layouts-main">
 	<h2>党建管理中心</h2>
-		<form action="http://holdcast.github.io/djxt-admin/index.html" method="post">
+		<form action="" method="post">
 			<input type="text" value="04211" class="ggg" name="user" placeholder="用户名">
 			<input type="password" value="123" class="ggg" name="password" placeholder="密码" required="">
 			<span><input type="checkbox" />记住密码</span>
 			<h6><a href="#">忘记密码?</a></h6>
 				<div class="clearfix"></div>
-				<input type="submit" value="登录" name="login">
+				<input type="submit" id="login" value="登录" name="login">
 		</form>
 		<p>还未注册账号?<a href="registration.html">注册</a></p>
 </div>
@@ -41,7 +41,9 @@
 <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
 <script src="js/jquery.scrollTo.js"></script>
 <script>
-
+	$('#login').click(function () {
+		location.href = 'http://holdcast.github.io/djxt-admin/index.html';
+    })
 </script>
 </body>
 </html>
