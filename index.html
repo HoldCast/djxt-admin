@@ -1,1029 +1,656 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
-<!-- BEGIN HEAD -->
 <head>
-   <meta charset="utf-8" />
-   <title>党建管理系统</title>
-   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-   <meta content="" name="description" />
-   <meta content="Mosaddek" name="author" />
-   <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-   <link href="assets/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" />
-   <link href="assets/bootstrap/css/bootstrap-fileupload.css" rel="stylesheet" />
-   <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
-   <link href="css/style.css" rel="stylesheet" />
-   <link href="css/style-responsive.css" rel="stylesheet" />
-   <link href="css/style-default.css" rel="stylesheet" id="style_color" />
-   <link href="assets/fullcalendar/fullcalendar/bootstrap-fullcalendar.css" rel="stylesheet" />
-   <link href="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.css" rel="stylesheet" type="text/css" media="screen">
+<title>党建系统管理中心</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="" />
+<link rel="icon" href="images/favicon2.ico">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- bootstrap-css -->
+<link rel="stylesheet" href="css/bootstrap.min.css" >
+<!-- //bootstrap-css -->
+<!-- Custom CSS -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link href="css/style-responsive.css" rel="stylesheet"/>
+<!-- font-awesome icons -->
+<link rel="stylesheet" href="css/font.css" type="text/css"/>
+<link href="css/font-awesome.css" rel="stylesheet">
+<link rel="stylesheet" href="css/morris.css" type="text/css"/>
+<!-- calendar -->
+<link rel="stylesheet" href="css/monthly.css">
+<link rel="stylesheet" href="css/index.css">
+<!-- //calendar -->
+<!-- //font-awesome icons -->
+<script src="js/jquery2.0.3.min.js"></script>
+<script src="js/raphael-min.js"></script>
+<script src="js/morris.js"></script>
 </head>
-<!-- END HEAD -->
-<!-- BEGIN BODY -->
-<body class="fixed-top">
-   <!-- BEGIN HEADER -->
-   <div id="header" class="navbar navbar-inverse navbar-fixed-top">
-       <!-- BEGIN TOP NAVIGATION BAR -->
-       <div class="navbar-inner">
-           <div class="container-fluid">
-               <!--BEGIN SIDEBAR TOGGLE-->
-               <div class="sidebar-toggle-box hidden-phone">
-                   <div class="icon-reorder tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
-               </div>
-               <!--END SIDEBAR TOGGLE-->
-               <!-- BEGIN LOGO -->
-               <a class="brand" href="index.html">
-                   <img src="img/logo.png" alt="Metro Lab" />
-               </a>
-               <!-- END LOGO -->
-               <!-- BEGIN RESPONSIVE MENU TOGGLER -->
-               <a class="btn btn-navbar collapsed" id="main_menu_trigger" data-toggle="collapse" data-target=".nav-collapse">
-                   <span class="icon-bar"></span>
-                   <span class="icon-bar"></span>
-                   <span class="icon-bar"></span>
-                   <span class="arrow"></span>
-               </a>
-               <!-- END RESPONSIVE MENU TOGGLER -->
-               <div id="top_menu" class="nav notify-row">
-                   <!-- BEGIN NOTIFICATION -->
-                   <ul class="nav top-menu">
-                       <!-- BEGIN SETTINGS -->
-                       <li class="dropdown">
-                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                               <i class="icon-tasks"></i>
-                               <span class="badge badge-important">6</span>
-                           </a>
-                           <ul class="dropdown-menu extended tasks-bar">
-                               <li>
-                                   <p>你有6条任务</p>
-                               </li>
-                               <li>
-                                   <a href="#">
-                                       <div class="task-info">
-                                         <div class="desc">控制台</div>
-                                         <div class="percent">44%</div>
-                                       </div>
-                                       <div class="progress progress-striped active no-margin-bot">
-                                           <div class="bar" style="width: 44%;"></div>
-                                       </div>
-                                   </a>
-                               </li>
-                               <li>
-                                   <a href="#">
-                                       <div class="task-info">
-                                           <div class="desc">数据库更新</div>
-                                           <div class="percent">65%</div>
-                                       </div>
-                                       <div class="progress progress-striped progress-success active no-margin-bot">
-                                           <div class="bar" style="width: 65%;"></div>
-                                       </div>
-                                   </a>
-                               </li>
-                               <li>
-                                   <a href="#">
-                                       <div class="task-info">
-                                           <div class="desc">手机开发进度</div>
-                                           <div class="percent">87%</div>
-                                       </div>
-                                       <div class="progress progress-striped progress-info active no-margin-bot">
-                                           <div class="bar" style="width: 87%;"></div>
-                                       </div>
-                                   </a>
-                               </li>
-                               <li>
-                                   <a href="#">
-                                       <div class="task-info">
-                                           <div class="desc">手机App进度</div>
-                                           <div class="percent">33%</div>
-                                       </div>
-                                       <div class="progress progress-striped progress-warning active no-margin-bot">
-                                           <div class="bar" style="width: 33%;"></div>
-                                       </div>
-                                   </a>
-                               </li>
-                               <li>
-                                   <a href="#">
-                                       <div class="task-info">
-                                           <div class="desc">控制台</div>
-                                           <div class="percent">90%</div>
-                                       </div>
-                                       <div class="progress progress-striped progress-danger active no-margin-bot">
-                                           <div class="bar" style="width: 90%;"></div>
-                                       </div>
-                                   </a>
-                               </li>
-                               <li class="external">
-                                   <a href="#">查看所有任务</a>
-                               </li>
-                           </ul>
-                       </li>
-                       <!-- END SETTINGS -->
-                       <!-- BEGIN INBOX DROPDOWN -->
-                       <li class="dropdown" id="header_inbox_bar">
-                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                               <i class="icon-envelope-alt"></i>
-                               <span class="badge badge-important">5</span>
-                           </a>
-                           <ul class="dropdown-menu extended inbox">
-                               <li>
-                                   <p>你有5条消息</p>
-                               </li>
-                               <li>
-                                   <a href="#">
-                                       <span class="photo"><img src="./img/avatar-mini.png" alt="avatar" /></span>
-									<span class="subject">
-									<span class="from">Jonathan Smith</span>
-									<span class="time">Just now</span>
-									</span>
-									<span class="message">
-									    Hello, 这是个消息列子.
-									</span>
-                                   </a>
-                               </li>
-                               <li>
-                                   <a href="#">
-                                       <span class="photo"><img src="./img/avatar-mini.png" alt="avatar" /></span>
-									<span class="subject">
-									<span class="from">Jhon Doe</span>
-									<span class="time">10 mins</span>
-									</span>
-									<span class="message">
-									 Hi, 最近咋样?
-									</span>
-                                   </a>
-                               </li>
-                               <li>
-                                   <a href="#">
-                                       <span class="photo"><img src="./img/avatar-mini.png" alt="avatar" /></span>
-									<span class="subject">
-									<span class="from">Jason Stathum</span>
-									<span class="time">3 hrs</span>
-									</span>
-									<span class="message">
-									    This is awesome dashboard.
-									</span>
-                                   </a>
-                               </li>
-                               <li>
-                                   <a href="#">
-                                       <span class="photo"><img src="./img/avatar-mini.png" alt="avatar" /></span>
-									<span class="subject">
-									<span class="from">Jondi Rose</span>
-									<span class="time">Just now</span>
-									</span>
-									<span class="message">
-									    Hello, this is metrolab
-									</span>
-                                   </a>
-                               </li>
-                               <li>
-                                   <a href="#">See all messages</a>
-                               </li>
-                           </ul>
-                       </li>
-                       <!-- END INBOX DROPDOWN -->
-                       <!-- BEGIN NOTIFICATION DROPDOWN -->
-                       <li class="dropdown" id="header_notification_bar">
-                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+<body>
+<section id="container">
+<!--header start-->
+<header class="header fixed-top clearfix">
+<!--logo start-->
+<div class="brand">
+    <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="">
+        <span>党建管理中心</span>
+    </a>
+</div>
+<!--logo end-->
+<div class="nav notify-row" id="top_menu">
+</div>
+<div class="top-nav clearfix">
+    <!--search & user info start-->
+    <ul class="nav pull-right top-menu">
+        <li>
+            <input type="text" class="form-control search" placeholder="搜索">
+        </li>
+        <!-- user login dropdown start-->
+        <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <img alt="" src="images/2.png">
+                <span class="username">王小二</span>
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu extended logout">
+                <li><a href="#"><i class=" fa fa-suitcase"></i>个人资料</a></li>
+                <li><a href="#"><i class="fa fa-cog"></i>设置</a></li>
+                <li><a href="login.html"><i class="fa fa-key"></i>注销</a></li>
+            </ul>
+        </li>
+        <!-- user login dropdown end -->
 
-                               <i class="icon-bell-alt"></i>
-                               <span class="badge badge-warning">7</span>
-                           </a>
-                           <ul class="dropdown-menu extended notification">
-                               <li>
-                                   <p>你有7条提示信息</p>
-                               </li>
-                               <li>
-                                   <a href="#">
-                                       <span class="label label-important"><i class="icon-bolt"></i></span>
-                                       Server #3 overloaded.
-                                       <span class="small italic">34 mins</span>
-                                   </a>
-                               </li>
-                               <li>
-                                   <a href="#">
-                                       <span class="label label-warning"><i class="icon-bell"></i></span>
-                                       Server #10 not respoding.
-                                       <span class="small italic">1 Hours</span>
-                                   </a>
-                               </li>
-                               <li>
-                                   <a href="#">
-                                       <span class="label label-important"><i class="icon-bolt"></i></span>
-                                       Database overloaded 24%.
-                                       <span class="small italic">4 hrs</span>
-                                   </a>
-                               </li>
-                               <li>
-                                   <a href="#">
-                                       <span class="label label-success"><i class="icon-plus"></i></span>
-                                       New user registered.
-                                       <span class="small italic">Just now</span>
-                                   </a>
-                               </li>
-                               <li>
-                                   <a href="#">
-                                       <span class="label label-info"><i class="icon-bullhorn"></i></span>
-                                       Application error.
-                                       <span class="small italic">10 mins</span>
-                                   </a>
-                               </li>
-                               <li>
-                                   <a href="#">See all notifications</a>
-                               </li>
-                           </ul>
-                       </li>
-                       <!-- END NOTIFICATION DROPDOWN -->
+    </ul>
+    <!--search & user info end-->
+</div>
+</header>
+<!--header end-->
+<!--sidebar start-->
+<aside>
+    <div id="sidebar" class="nav-collapse">
+        <!-- sidebar menu start-->
+        <div class="leftside-navigation">
+            <ul class="sidebar-menu" id="nav-accordion">
+                <li>
+                    <a class="active" href="index.html">
+                        <i class="fa fa-dashboard"></i>
+                        <span>首页</span>
+                    </a>
+                </li>
 
-                   </ul>
-               </div>
-               <!-- END  NOTIFICATION -->
-               <div class="top-nav ">
-                   <ul class="nav pull-right top-menu" >
-                       <!-- BEGIN SUPPORT -->
-                       <li class="dropdown mtop5">
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-book"></i>
+                        <span>组织机构</span>
+                    </a>
+                    <ul class="sub">
+						<li><a href="typography.html">Typography</a></li>
+						<li><a href="glyphicon.html">glyphicon</a></li>
+                        <li><a href="grids.html">Grids</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="fontawesome.html">
+                        <i class="fa fa-bullhorn"></i>
+                        <span>党员发展</span>
+                    </a>
+					<ul class="sub">
+						<li><a href="typography.html">入党积极分子</a></li>
+						<li><a href="glyphicon.html">glyphicon</a></li>
+						<li><a href="grids.html">Grids</a></li>
+					</ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-th"></i>
+                        <span>党员管理</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a href="basic_table.html">Basic Table</a></li>
+                        <li><a href="responsive_table.html">Responsive Table</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-tasks"></i>
+                        <span>党员服务</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a href="form_component.html">Form Elements</a></li>
+                        <li><a href="form_validation.html">Form Validation</a></li>
+						<li><a href="dropzone.html">Dropzone</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-envelope"></i>
+                        <span>党员活动</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a href="mail.html">Inbox</a></li>
+                        <li><a href="mail_compose.html">Compose Mail</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class=" fa fa-bar-chart-o"></i>
+                        <span>居民议事会</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a href="chartjs.html">Chart js</a></li>
+                        <li><a href="flot_chart.html">Flot Charts</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class=" fa fa-bar-chart-o"></i>
+                        <span>Maps</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a href="google_map.html">Google Map</a></li>
+                        <li><a href="vector_map.html">Vector Map</a></li>
+                    </ul>
+                </li>
+                <li class="sub-menu">
+                    <a href="javascript:;">
+                        <i class="fa fa-glass"></i>
+                        <span>Extra</span>
+                    </a>
+                    <ul class="sub">
+                        <li><a href="gallery.html">Gallery</a></li>
+						<li><a href="404.html">404 Error</a></li>
+                        <li><a href="registration.html">Registration</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="login.html">
+                        <i class="fa fa-user"></i>
+                        <span>Login Page</span>
+                    </a>
+                </li>
+            </ul>            </div>
+        <!-- sidebar menu end-->
+    </div>
+</aside>
+<!--sidebar end-->
+<!--main content start-->
+<section id="main-content">
+	<section class="wrapper">
+		<!-- //market-->
+		<div class="market-updates">
+			<div class="col-md-3 market-update-gd">
+				<div class="market-update-block clr-block-2">
+					<div class="col-md-4 market-update-right">
+						<i class="fa fa-eye"> </i>
+					</div>
+					 <div class="col-md-8 market-update-left">
+					 <h4>Visitors</h4>
+					<h3>13,500</h3>
+					<p>Other hand, we denounce</p>
+				  </div>
+				  <div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="col-md-3 market-update-gd">
+				<div class="market-update-block clr-block-1">
+					<div class="col-md-4 market-update-right">
+						<i class="fa fa-users" ></i>
+					</div>
+					<div class="col-md-8 market-update-left">
+					<h4>Users</h4>
+						<h3>1,250</h3>
+						<p>Other hand, we denounce</p>
+					</div>
+				  <div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="col-md-3 market-update-gd">
+				<div class="market-update-block clr-block-3">
+					<div class="col-md-4 market-update-right">
+						<i class="fa fa-usd"></i>
+					</div>
+					<div class="col-md-8 market-update-left">
+						<h4>Sales</h4>
+						<h3>1,500</h3>
+						<p>Other hand, we denounce</p>
+					</div>
+				  <div class="clearfix"> </div>
+				</div>
+			</div>
+			<div class="col-md-3 market-update-gd">
+				<div class="market-update-block clr-block-4">
+					<div class="col-md-4 market-update-right">
+						<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+					</div>
+					<div class="col-md-8 market-update-left">
+						<h4>Orders</h4>
+						<h3>1,500</h3>
+						<p>Other hand, we denounce</p>
+					</div>
+				  <div class="clearfix"> </div>
+				</div>
+			</div>
+		   <div class="clearfix"> </div>
+		</div>
+		<!-- //market-->
+		<div class="row">
+			<div class="panel-body">
+				<div class="col-md-12 w3ls-graph">
+					<!--agileinfo-grap-->
+						<div class="agileinfo-grap">
+							<div class="agileits-box">
+								<header class="agileits-box-header clearfix">
+									<h3>Visitor Statistics</h3>
+										<div class="toolbar">
 
-                           <a class="dropdown-toggle element" data-placement="bottom" data-toggle="tooltip" href="#" data-original-title="Chat">
-                               <i class="icon-comments-alt"></i>
-                           </a>
-                       </li>
-                       <li class="dropdown mtop5">
-                           <a class="dropdown-toggle element" data-placement="bottom" data-toggle="tooltip" href="#" data-original-title="Help">
-                               <i class="icon-headphones"></i>
-                           </a>
-                       </li>
-                       <!-- END SUPPORT -->
-                       <!-- BEGIN USER LOGIN DROPDOWN -->
-                       <li class="dropdown">
-                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                               <img src="img/avatar1_small.jpg" alt="">
-                               <span class="username">Jhon Doe</span>
-                               <b class="caret"></b>
-                           </a>
-                           <ul class="dropdown-menu extended logout">
-                               <li><a href="#"><i class="icon-user"></i>我的资料</a></li>
-                               <li><a href="#"><i class="icon-cog"></i>我的设置</a></li>
-                               <li><a href="login.html"><i class="icon-key"></i>退出</a></li>
-                           </ul>
-                       </li>
-                       <!-- END USER LOGIN DROPDOWN -->
-                   </ul>
-                   <!-- END TOP NAVIGATION MENU -->
-               </div>
-           </div>
-       </div>
-       <!-- END TOP NAVIGATION BAR -->
-   </div>
-   <!-- END HEADER -->
-   <!-- BEGIN CONTAINER -->
-   <div id="container" class="row-fluid">
-      <!-- BEGIN SIDEBAR -->
-      <div class="sidebar-scroll">
-        <div id="sidebar" class="nav-collapse collapse">
 
-         <!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
-         <div class="navbar-inverse">
-            <form class="navbar-search visible-phone">
-               <input type="text" class="search-query" placeholder="Search" />
-            </form>
-         </div>
-         <!-- END RESPONSIVE QUICK SEARCH FORM -->
-         <!-- BEGIN SIDEBAR MENU -->
-          <ul class="sidebar-menu">
-              <li class="sub-menu active">
-                  <a class="" href="index.html">
-                      <i class="icon-dashboard"></i>
-                      <span>控制台</span>
-                  </a>
-              </li>
-              <li class="sub-menu">
-                  <a href="javascript:;" class="">
-                      <i class="icon-book"></i>
-                      <span>UI 组件</span>
-                      <span class="arrow"></span>
-                  </a>
-                  <ul class="sub">
-                      <li><a class="" href="general.html">通用</a></li>
-                      <li><a class="" href="button.html">按钮</a></li>
-                      <li><a class="" href="slider.html">滑动</a></li>
-                      <li><a class="" href="metro_view.html">Metro风格</a></li>
-                      <li><a class="" href="tabs_accordion.html">Tab选项卡 & 手风琴</a></li>
-                      <li><a class="" href="typography.html">文字排版</a></li>
-                      <li><a class="" href="tree_view.html">树菜单</a></li>
-                      <li><a class="" href="nestable.html">嵌套列表</a></li>
-                  </ul>
-              </li>
-              <li class="sub-menu">
-                  <a href="javascript:;" class="">
-                      <i class="icon-cogs"></i>
-                      <span>插件</span>
-                      <span class="arrow"></span>
-                  </a>
-                  <ul class="sub">
-                      <li><a class="" href="calendar.html">日历</a></li>
-                      <li><a class="" href="grids.html">网格</a></li>
-                      <li><a class="" href="chartjs.html">图表统计</a></li>
-                      <li><a class="" href="flot_chart.html">Flot图表</a></li>
-                      <li><a class="" href="gallery.html">相册</a></li>
-                  </ul>
-              </li>
-              <li class="sub-menu">
-                  <a href="javascript:;" class="">
-                      <i class="icon-tasks"></i>
-                      <span>表单</span>
-                      <span class="arrow"></span>
-                  </a>
-                  <ul class="sub">
-                      <li><a class="" href="form_layout.html">表单布局</a></li>
-                      <li><a class="" href="form_component.html">表单组件</a></li>
-                      <li><a class="" href="form_wizard.html">表单提示</a></li>
-                      <li><a class="" href="form_validation.html">表单验证</a></li>
-                      <li><a class="" href="dropzone.html">文件上传</a></li>
-                  </ul>
-              </li>
-              <li class="sub-menu">
-                  <a href="javascript:;" class="">
-                      <i class="icon-th"></i>
-                      <span>数据表格</span>
-                      <span class="arrow"></span>
-                  </a>
-                  <ul class="sub">
-                      <li><a class="" href="basic_table.html">简单表格</a></li>
-                      <li><a class="" href="dynamic_table.html">动态表格</a></li>
-                      <li><a class="" href="editable_table.html">可编辑表格</a></li>
-                  </ul>
-              </li>
-              <li class="sub-menu">
-                  <a href="javascript:;" class="">
-                      <i class="icon-fire"></i>
-                      <span>Icon图标</span>
-                      <span class="arrow"></span>
-                  </a>
-                  <ul class="sub">
-                      <li><a class="" href="font_awesome.html">FontAwesome图标</a></li>
-                      <li><a class="" href="glyphicons.html">Glyphicons图标</a></li>
-                  </ul>
-              </li>
-              <li class="sub-menu">
-                  <a class="" href="javascript:;">
-                      <i class="icon-trophy"></i>
-                      <span>代码片段</span>
-                      <span class="arrow"></span>
-                  </a>
-                  <ul class="sub">
-                      <li><a href="general_portlet.html" class="">通用片段</a></li>
-                      <li><a href="draggable_portlet.html" class="">可拖拽片段</a></li>
-                  </ul>
-              </li>
-              <li class="sub-menu">
-                  <a class="" href="javascript:;">
-                      <i class="icon-map-marker"></i>
-                      <span>地图</span>
-                      <span class="arrow"></span>
-                  </a>
-                  <ul class="sub">
-                      <li><a href="vector_map.html" class="">Vector地图</a></li>
-                      <li><a href="google_map.html" class="">Google地图</a></li>
-                  </ul>
-              </li>
-              <li class="sub-menu">
-                  <a href="javascript:;" class="">
-                      <i class="icon-file-alt"></i>
-                      <span>基本页面</span>
-                      <span class="arrow"></span>
-                  </a>
-                  <ul class="sub">
-                      <li><a class="" href="blank.html">空白页面</a></li>
-                      <li><a class="" href="blog.html">博客</a></li>
-                      <li><a class="" href="timeline.html">时间轴</a></li>
-                      <li><a class="" href="profile.html">个人资料</a></li>
-                      <li><a class="" href="about_us.html">关于我们</a></li>
-                      <li><a class="" href="contact_us.html">联系我们</a></li>
-                  </ul>
-              </li>
-              <li class="sub-menu">
-                  <a href="javascript:;" class="">
-                      <i class="icon-glass"></i>
-                      <span>其他</span>
-                      <span class="arrow"></span>
-                  </a>
-                  <ul class="sub">
-                      <li><a class="" href="lock.html">锁屏</a></li>
-                      <li><a class="" href="invoice.html">购物单</a></li>
-                      <li><a class="" href="pricing_tables.html">价目单</a></li>
-                      <li><a class="" href="search_result.html">搜索展示</a></li>
-                      <li><a class="" href="faq.html">帮助页面</a></li>
-                      <li><a class="" href="404.html">404错误页面</a></li>
-                      <li><a class="" href="500.html">500错误页面</a></li>
-                  </ul>
-              </li>
+										</div>
+								</header>
+								<div class="agileits-box-body clearfix">
+									<div id="hero-area"></div>
+								</div>
+							</div>
+						</div>
+	<!--//agileinfo-grap-->
 
-              <li>
-                  <a class="" href="login.html">
-                    <i class="icon-user"></i>
-                    <span>登录页面</span>
-                  </a>
-              </li>
-          </ul>
-         <!-- END SIDEBAR MENU -->
-      </div>
-      </div>
-      <!-- END SIDEBAR -->
-      <!-- BEGIN PAGE -->  
-      <div id="main-content">
-         <!-- BEGIN PAGE CONTAINER-->
-         <div class="container-fluid">
-            <!-- BEGIN PAGE HEADER-->   
-            <div class="row-fluid">
-               <div class="span12">
-                   <!-- BEGIN THEME CUSTOMIZER-->
-                   <div id="theme-change" class="hidden-phone">
-                       <i class="icon-cogs"></i>
-                        <span class="settings">
-                            <span class="text">主题颜色:</span>
-                            <span class="colors">
-                                <span class="color-default" data-style="default"></span>
-                                <span class="color-green" data-style="green"></span>
-                                <span class="color-gray" data-style="gray"></span>
-                                <span class="color-purple" data-style="purple"></span>
-                                <span class="color-red" data-style="red"></span>
-                            </span>
-                        </span>
-                   </div>
-                   <!-- END THEME CUSTOMIZER-->
-                  <!-- BEGIN PAGE TITLE & BREADCRUMB-->
-                   <h3 class="page-title">
-                     控制台
-                   </h3>
-                   <ul class="breadcrumb">
-                       <li>
-                           <a href="#">首页</a>
-                           <span class="divider">/</span>
-                       </li>                      
-                       <li class="active">
-                           控制台
-                       </li>
-                       <li class="pull-right search-wrap">
-                           <form action="search_result.html" class="hidden-phone">
-                               <div class="input-append search-input-area">
-                                   <input class="" id="appendedInputButton" type="text">
-                                   <button class="btn" type="button"><i class="icon-search"></i> </button>
-                               </div>
-                           </form>
-                       </li>
-                   </ul>
-                   <!-- END PAGE TITLE & BREADCRUMB-->
-               </div>
-            </div>
-            <!-- END PAGE HEADER-->
-            <!-- BEGIN PAGE CONTENT-->
-            <div class="row-fluid">
-                <!--BEGIN METRO STATES-->
-                <div class="metro-nav">
-                    <div class="metro-nav-block nav-block-orange">
-                        <a data-original-title="" href="#">
-                            <i class="icon-user"></i>
-                            <div class="info">321</div>
-                            <div class="status">新增用户</div>
-                        </a>
-                    </div>
-                    <div class="metro-nav-block nav-olive">
-                        <a data-original-title="" href="#">
-                            <i class="icon-tags"></i>
-                            <div class="info">+970</div>
-                            <div class="status">销售数据</div>
-                        </a>
-                    </div>
-                    <div class="metro-nav-block nav-block-yellow">
-                        <a data-original-title="" href="#">
-                            <i class="icon-comments-alt"></i>
-                            <div class="info">49</div>
-                            <div class="status">用户评论</div>
-                        </a>
-                    </div>
-                    <div class="metro-nav-block nav-block-green double">
-                        <a data-original-title="" href="#">
-                            <i class="icon-eye-open"></i>
-                            <div class="info">+897</div>
-                            <div class="status">UV</div>
-                        </a>
-                    </div>
-                    <div class="metro-nav-block nav-block-red">
-                        <a data-original-title="" href="#">
-                            <i class="icon-bar-chart"></i>
-                            <div class="info">+288</div>
-                            <div class="status">更新</div>
-                        </a>
-                    </div>
+				</div>
+			</div>
+		</div>
+		<div class="agil-info-calendar">
+		<!-- calendar -->
+		<div class="col-md-6 agile-calendar">
+			<div class="calendar-widget">
+                <div class="panel-heading ui-sortable-handle">
+					<span class="panel-icon">
+                      <i class="fa fa-calendar-o"></i>
+                    </span>
+                    <span class="panel-title"> Calendar Widget</span>
                 </div>
-                <div class="metro-nav">
-                    <div class="metro-nav-block nav-light-purple">
-                        <a data-original-title="" href="#">
-                            <i class="icon-shopping-cart"></i>
-                            <div class="info">29</div>
-                            <div class="status">新增订单</div>
-                        </a>
-                    </div>
-                    <div class="metro-nav-block nav-light-blue double">
-                        <a data-original-title="" href="#">
-                            <i class="icon-tasks"></i>
-                            <div class="info">$37624</div>
-                            <div class="status">库存信息</div>
-                        </a>
-                    </div>
-                    <div class="metro-nav-block nav-light-green">
-                        <a data-original-title="" href="#">
-                            <i class="icon-envelope"></i>
-                            <div class="info">123</div>
-                            <div class="status">消息</div>
-                        </a>
-                    </div>
-                    <div class="metro-nav-block nav-light-brown">
-                        <a data-original-title="" href="#">
-                            <i class="icon-remove-sign"></i>
-                            <div class="info">34</div>
-                            <div class="status">取消订单</div>
-                        </a>
-                    </div>
-                    <div class="metro-nav-block nav-block-grey ">
-                        <a data-original-title="" href="#">
-                            <i class="icon-external-link"></i>
-                            <div class="info">$53412</div>
-                            <div class="status">总利润</div>
-                        </a>
-                    </div>
-                </div>
-                <div class="space10"></div>
-                <!--END METRO STATES-->
-            </div>
-            <div class="row-fluid">
-                <div class="span6">
-                    <!-- BEGIN CHART PORTLET-->
-                    <div class="widget ">
-                        <div class="widget-title">
-                            <h4><i class="icon-reorder"></i> 饼状图</h4>
-                            <span class="tools">
-                                <a href="javascript:;" class="icon-chevron-down"></a>
-                                <a href="javascript:;" class="icon-remove"></a>
-                            </span>
-                        </div>
-                        <div class="widget-body">
-                            <div class="text-center">
-                                <canvas id="doughnut" height="300" width="400"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END CHART PORTLET-->
-                </div>
-                <div class="span6">
-                    <!-- BEGIN CHART PORTLET-->
-                    <div class="widget green">
-                        <div class="widget-title">
-                            <h4><i class="icon-reorder"> </i> 曲线图</h4>
-                            <span class="tools">
-                                <a href="javascript:;" class="icon-chevron-down"></a>
-                                <a href="javascript:;" class="icon-remove"></a>
-                            </span>
-                        </div>
-                        <div class="widget-body">
-                            <div class="text-center">
-                                <canvas id="line" height="300" width="450"></canvas>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END CHART PORTLET-->
-                </div>
-            </div>
+				<!-- grids -->
+					<div class="agile-calendar-grid">
+						<div class="page">
 
-            <div class="row-fluid">
-                <div class="span7">
-                    <!--BEGIN GENERAL STATISTICS-->
-                    <div class="widget orange">
-                        <div class="widget-title">
-                            <h4><i class="icon-tasks"></i> 通用统计 </h4>
-                         <span class="tools">
-                            <a href="javascript:;" class="icon-chevron-down"></a>
-                            <a href="javascript:;" class="icon-remove"></a>
-                         </span>
-                            <div class="update-btn">
-                                <a href="javascript:;" class="btn update-easy-pie-chart"><i class="icon-repeat"></i> Update</a>
-                            </div>
-                        </div>
-                        <div class="widget-body">
-                            <div class="text-center">
-                                <div class="easy-pie-chart">
-                                    <div class="percentage success" data-percent="55"><span>55</span>%</div>
-                                    <div class="title">New visits</div>
-                                </div>
-                                <div class="easy-pie-chart">
-                                    <div class="percentage" data-percent="46"><span>46</span>%</div>
-                                    <div class="title">Bounce rate</div>
-                                </div>
-                                <div class="easy-pie-chart">
-                                    <div class="percentage" data-percent="92"><span>92</span>%</div>
-                                    <div class="title">Server load</div>
-                                </div>
-                                <div class="easy-pie-chart">
-                                    <div class="percentage" data-percent="84"><span>752</span>MB</div>
-                                    <div class="title">Used RAM</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--END GENERAL STATISTICS-->
-                </div>
-                <div class="span5">
-                    <!--BEGIN GENERAL STATISTICS-->
-                    <div class="widget purple">
-                        <div class="widget-title">
-                            <h4><i class="icon-tasks"></i> 统计数据 </h4>
-                         <span class="tools">
-                            <a href="javascript:;" class="icon-chevron-down"></a>
-                            <a href="javascript:;" class="icon-remove"></a>
-                         </span>
-                        </div>
-                        <div class="widget-body">
-                            <div class="row-fluid">
-                                <div class="text-center">
-                                    <div class="sparkline">
-                                        <div id="metro-sparkline-type1"></div>
-                                        <div class="sparkline-tittle">Server Load</div>
-                                    </div>
-                                    <div class="sparkline">
-                                        <div id="metro-sparkline-type2"></div>
-                                        <div class="sparkline-tittle">Network Load</div>
-                                    </div>
-                                    <div class="sparkline">
-                                        <div id="metro-sparkline-type3"></div>
-                                        <div class="sparkline-tittle">Visit Load</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--END GENERAL STATISTICS-->
-                </div>
-            </div>
-            <div class="row-fluid">
-                 <div class="span6">
-                     <!-- BEGIN NOTIFICATIONS PORTLET-->
-                     <div class="widget blue">
-                         <div class="widget-title">
-                             <h4><i class="icon-bell"></i> 提示信息 </h4>
-                           <span class="tools">
-                               <a href="javascript:;" class="icon-chevron-down"></a>
-                               <a href="javascript:;" class="icon-remove"></a>
-                           </span>
-                         </div>
-                         <div class="widget-body">
-                             <ul class="item-list scroller padding"  style="overflow: hidden; width: auto; height: 320px;" data-always-visible="1">
-                                 <li>
-                                     <span class="label label-success"><i class="icon-bell"></i></span>
-                                     <span>New user registered.</span>
-                                     <div class="pull-right">
-                                         <span class="small italic ">Just now</span>
+							<div class="w3l-calendar-left">
+								<div class="calendar-heading">
 
-                                     </div>
-                                 </li>
-                                 <li>
-                                     <span class="label label-success"><i class="icon-bell"></i></span>
-                                     <span>New order received.</span>
-                                     <div class="pull-right">
-                                         <span class="small italic ">15 mins ago</span>
+								</div>
+								<div class="monthly" id="mycalendar"></div>
+							</div>
 
-                                     </div>
-                                 </li>
-                                 <li>
-                                     <span class="label label-warning"><i class="icon-bullhorn"></i></span>
-                                     <span>Alerting a user account balance.</span>
-                                     <div class="pull-right">
-                                         <span class="small italic ">3 hours ago</span>
+							<div class="clearfix"> </div>
+						</div>
+					</div>
+			</div>
+		</div>
+		<!-- //calendar -->
+		<div class="col-md-6 w3agile-notifications">
+			<div class="notifications">
+				<!--notification start-->
 
-                                     </div>
-                                 </li>
-                                 <li>
-                                     <span class="label label-important"><i class=" icon-bug"></i></span>
-                                     <span>Alerting administrators staff.</span>
-                                     <div class="pull-right">
-                                         <span class="small italic ">9 mins ago</span>
+					<header class="panel-heading">
+						Notification
+					</header>
+					<div class="notify-w3ls">
+						<div class="alert alert-info clearfix">
+							<span class="alert-icon"><i class="fa fa-envelope-o"></i></span>
+							<div class="notification-info">
+								<ul class="clearfix notification-meta">
+									<li class="pull-left notification-sender"><span><a href="#">Jonathan Smith</a></span> send you a mail </li>
+									<li class="pull-right notification-time">1 min ago</li>
+								</ul>
+								<p>
+									Urgent meeting for next proposal
+								</p>
+							</div>
+						</div>
+						<div class="alert alert-danger">
+							<span class="alert-icon"><i class="fa fa-facebook"></i></span>
+							<div class="notification-info">
+								<ul class="clearfix notification-meta">
+									<li class="pull-left notification-sender"><span><a href="#">Jonathan Smith</a></span> mentioned you in a post </li>
+									<li class="pull-right notification-time">7 Hours Ago</li>
+								</ul>
+								<p>
+									Very cool photo jack
+								</p>
+							</div>
+						</div>
+						<div class="alert alert-success ">
+							<span class="alert-icon"><i class="fa fa-comments-o"></i></span>
+							<div class="notification-info">
+								<ul class="clearfix notification-meta">
+									<li class="pull-left notification-sender">You have 5 message unread</li>
+									<li class="pull-right notification-time">1 min ago</li>
+								</ul>
+								<p>
+									<a href="#">Anjelina Mewlo, Jack Flip</a> and <a href="#">3 others</a>
+								</p>
+							</div>
+						</div>
+						<div class="alert alert-warning ">
+							<span class="alert-icon"><i class="fa fa-bell-o"></i></span>
+							<div class="notification-info">
+								<ul class="clearfix notification-meta">
+									<li class="pull-left notification-sender">Domain Renew Deadline 7 days ahead</li>
+									<li class="pull-right notification-time">5 Days Ago</li>
+								</ul>
+								<p>
+									Next 5 July Thursday is the last day
+								</p>
+							</div>
+						</div>
+						<div class="alert alert-info clearfix">
+							<span class="alert-icon"><i class="fa fa-envelope-o"></i></span>
+							<div class="notification-info">
+								<ul class="clearfix notification-meta">
+									<li class="pull-left notification-sender"><span><a href="#">Jonathan Smith</a></span> send you a mail </li>
+									<li class="pull-right notification-time">1 min ago</li>
+								</ul>
+								<p>
+									Urgent meeting for next proposal
+								</p>
+							</div>
+						</div>
 
-                                     </div>
-                                 </li>
-                                 <li>
-                                     <span class="label label-important"><i class=" icon-bug"></i></span>
-                                     <span>Messages are not sent to users.</span>
-                                     <div class="pull-right">
-                                         <span class="small italic ">10 hours ago</span>
+					</div>
 
-                                     </div>
-                                 </li>
-                                 <li>
-                                     <span class="label label-warning"><i class="icon-bullhorn"></i></span>
-                                     <span>Web server #12 failed to relosd.</span>
-                                     <div class="pull-right">
-                                         <span class="small italic ">3 mins ago</span>
+				<!--notification end-->
+				</div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+			<!-- tasks -->
+			<div class="agile-last-grids">
+				<div class="col-md-4 agile-last-left">
+					<div class="agile-last-grid">
+						<div class="area-grids-heading">
+							<h3>Monthly</h3>
+						</div>
+						<div id="graph7"></div>
+						<script>
+						// This crosses a DST boundary in the UK.
+						Morris.Area({
+						  element: 'graph7',
+						  data: [
+							{x: '2013-03-30 22:00:00', y: 3, z: 3},
+							{x: '2013-03-31 00:00:00', y: 2, z: 0},
+							{x: '2013-03-31 02:00:00', y: 0, z: 2},
+							{x: '2013-03-31 04:00:00', y: 4, z: 4}
+						  ],
+						  xkey: 'x',
+						  ykeys: ['y', 'z'],
+						  labels: ['Y', 'Z']
+						});
+						</script>
 
-                                     </div>
-                                 </li>
-                                 <li>
-                                     <span class="label label-success"><i class="icon-bell"></i></span>
-                                     <span>New order received.</span>
-                                     <div class="pull-right">
-                                         <span class="small italic ">40 mins ago</span>
+					</div>
+				</div>
+				<div class="col-md-4 agile-last-left agile-last-middle">
+					<div class="agile-last-grid">
+						<div class="area-grids-heading">
+							<h3>Daily</h3>
+						</div>
+						<div id="graph8"></div>
+						<script>
+						/* data stolen from http://howmanyleft.co.uk/vehicle/jaguar_'e'_type */
+						var day_data = [
+						  {"period": "2016-10-01", "licensed": 3407, "sorned": 660},
+						  {"period": "2016-09-30", "licensed": 3351, "sorned": 629},
+						  {"period": "2016-09-29", "licensed": 3269, "sorned": 618},
+						  {"period": "2016-09-20", "licensed": 3246, "sorned": 661},
+						  {"period": "2016-09-19", "licensed": 3257, "sorned": 667},
+						  {"period": "2016-09-18", "licensed": 3248, "sorned": 627},
+						  {"period": "2016-09-17", "licensed": 3171, "sorned": 660},
+						  {"period": "2016-09-16", "licensed": 3171, "sorned": 676},
+						  {"period": "2016-09-15", "licensed": 3201, "sorned": 656},
+						  {"period": "2016-09-10", "licensed": 3215, "sorned": 622}
+						];
+						Morris.Bar({
+						  element: 'graph8',
+						  data: day_data,
+						  xkey: 'period',
+						  ykeys: ['licensed', 'sorned'],
+						  labels: ['Licensed', 'SORN'],
+						  xLabelAngle: 60
+						});
+						</script>
+					</div>
+				</div>
+				<div class="col-md-4 agile-last-left agile-last-right">
+					<div class="agile-last-grid">
+						<div class="area-grids-heading">
+							<h3>Yearly</h3>
+						</div>
+						<div id="graph9"></div>
+						<script>
+						var day_data = [
+						  {"elapsed": "I", "value": 34},
+						  {"elapsed": "II", "value": 24},
+						  {"elapsed": "III", "value": 3},
+						  {"elapsed": "IV", "value": 12},
+						  {"elapsed": "V", "value": 13},
+						  {"elapsed": "VI", "value": 22},
+						  {"elapsed": "VII", "value": 5},
+						  {"elapsed": "VIII", "value": 26},
+						  {"elapsed": "IX", "value": 12},
+						  {"elapsed": "X", "value": 19}
+						];
+						Morris.Line({
+						  element: 'graph9',
+						  data: day_data,
+						  xkey: 'elapsed',
+						  ykeys: ['value'],
+						  labels: ['value'],
+						  parseTime: false
+						});
+						</script>
 
-                                     </div>
-                                 </li>
-                                 <li>
-                                     <span class="label label-warning"><i class="icon-bullhorn"></i></span>
-                                     <span>Alerting a user account balance.</span>
-                                     <div class="pull-right">
-                                         <span class="small italic ">1 hours ago</span>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		<!-- //tasks -->
+		<div class="agileits-w3layouts-stats">
+					<div class="col-md-4 stats-info widget">
+						<div class="stats-info-agileits">
+							<div class="stats-title">
+								<h4 class="title">Browser Stats</h4>
+							</div>
+							<div class="stats-body">
+								<ul class="list-unstyled">
+									<li>GoogleChrome <span class="pull-right">85%</span>
+										<div class="progress progress-striped active progress-right">
+											<div class="bar green" style="width:85%;"></div>
+										</div>
+									</li>
+									<li>Firefox <span class="pull-right">35%</span>
+										<div class="progress progress-striped active progress-right">
+											<div class="bar yellow" style="width:35%;"></div>
+										</div>
+									</li>
+									<li>Internet Explorer <span class="pull-right">78%</span>
+										<div class="progress progress-striped active progress-right">
+											<div class="bar red" style="width:78%;"></div>
+										</div>
+									</li>
+									<li>Safari <span class="pull-right">50%</span>
+										<div class="progress progress-striped active progress-right">
+											<div class="bar blue" style="width:50%;"></div>
+										</div>
+									</li>
+									<li>Opera <span class="pull-right">80%</span>
+										<div class="progress progress-striped active progress-right">
+											<div class="bar light-blue" style="width:80%;"></div>
+										</div>
+									</li>
+									<li class="last">Others <span class="pull-right">60%</span>
+										<div class="progress progress-striped active progress-right">
+											<div class="bar orange" style="width:60%;"></div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-8 stats-info stats-last widget-shadow">
+						<div class="stats-last-agile">
+							<table class="table stats-table ">
+								<thead>
+									<tr>
+										<th>S.NO</th>
+										<th>PRODUCT</th>
+										<th>STATUS</th>
+										<th>PROGRESS</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="row">1</th>
+										<td>Lorem ipsum</td>
+										<td><span class="label label-success">In progress</span></td>
+										<td><h5>85% <i class="fa fa-level-up"></i></h5></td>
+									</tr>
+									<tr>
+										<th scope="row">2</th>
+										<td>Aliquam</td>
+										<td><span class="label label-warning">New</span></td>
+										<td><h5>35% <i class="fa fa-level-up"></i></h5></td>
+									</tr>
+									<tr>
+										<th scope="row">3</th>
+										<td>Lorem ipsum</td>
+										<td><span class="label label-danger">Overdue</span></td>
+										<td><h5 class="down">40% <i class="fa fa-level-down"></i></h5></td>
+									</tr>
+									<tr>
+										<th scope="row">4</th>
+										<td>Aliquam</td>
+										<td><span class="label label-info">Out of stock</span></td>
+										<td><h5>100% <i class="fa fa-level-up"></i></h5></td>
+									</tr>
+									<tr>
+										<th scope="row">5</th>
+										<td>Lorem ipsum</td>
+										<td><span class="label label-success">In progress</span></td>
+										<td><h5 class="down">10% <i class="fa fa-level-down"></i></h5></td>
+									</tr>
+									<tr>
+										<th scope="row">6</th>
+										<td>Aliquam</td>
+										<td><span class="label label-warning">New</span></td>
+										<td><h5>38% <i class="fa fa-level-up"></i></h5></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="clearfix"> </div>
+				</div>
+</section>
+ <!-- footer -->
+		  <div class="footer">
+			<div class="wthree-copyright">
+			  <p>Copyright &copy; 2017.Company name All rights reserved.<a target="_blank" href="http://www.17sucai.com/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
+			</div>
+		  </div>
+  <!-- / footer -->
+</section>
+<!--main content end-->
+</section>
+<script src="js/bootstrap.js"></script>
+<script src="js/jquery.dcjqaccordion.2.7.js"></script>
+<script src="js/scripts.js"></script>
+<script src="js/jquery.slimscroll.js"></script>
+<script src="js/jquery.nicescroll.js"></script>
+<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
+<script src="js/jquery.scrollTo.js"></script>
+<!-- morris JavaScript -->
+<script>
+	$(document).ready(function() {
+		//BOX BUTTON SHOW AND CLOSE
+	   jQuery('.small-graph-box').hover(function() {
+		  jQuery(this).find('.box-button').fadeIn('fast');
+	   }, function() {
+		  jQuery(this).find('.box-button').fadeOut('fast');
+	   });
+	   jQuery('.small-graph-box .box-close').click(function() {
+		  jQuery(this).closest('.small-graph-box').fadeOut(200);
+		  return false;
+	   });
 
-                                     </div>
-                                 </li>
-                                 <li>
-                                     <span class="label label-important"><i class=" icon-bug"></i></span>
-                                     <span>Alerting administrators staff.</span>
-                                     <div class="pull-right">
-                                         <span class="small italic ">1 mins ago</span>
+	    //CHARTS
+	    function gd(year, day, month) {
+			return new Date(year, month - 1, day).getTime();
+		}
 
-                                     </div>
-                                 </li>
-                                 <li>
-                                     <span class="label label-important"><i class=" icon-bug"></i></span>
-                                     <span>Messages are not sent to users.</span>
-                                     <div class="pull-right">
-                                         <span class="small italic ">11 hours ago</span>
+		graphArea2 = Morris.Area({
+			element: 'hero-area',
+			padding: 10,
+        behaveLikeLine: true,
+        gridEnabled: false,
+        gridLineColor: '#dddddd',
+        axes: true,
+        resize: true,
+        smooth:true,
+        pointSize: 0,
+        lineWidth: 0,
+        fillOpacity:0.85,
+			data: [
+				{period: '2015 Q1', iphone: 2668, ipad: null, itouch: 2649},
+				{period: '2015 Q2', iphone: 15780, ipad: 13799, itouch: 12051},
+				{period: '2015 Q3', iphone: 12920, ipad: 10975, itouch: 9910},
+				{period: '2015 Q4', iphone: 8770, ipad: 6600, itouch: 6695},
+				{period: '2016 Q1', iphone: 10820, ipad: 10924, itouch: 12300},
+				{period: '2016 Q2', iphone: 9680, ipad: 9010, itouch: 7891},
+				{period: '2016 Q3', iphone: 4830, ipad: 3805, itouch: 1598},
+				{period: '2016 Q4', iphone: 15083, ipad: 8977, itouch: 5185},
+				{period: '2017 Q1', iphone: 10697, ipad: 4470, itouch: 2038},
 
-                                     </div>
-                                 </li>
-                                 <li>
-                                     <span class="label label-warning"><i class="icon-bullhorn"></i></span>
-                                     <span>Web server #12 failed to relosd.</span>
-                                     <div class="pull-right">
-                                         <span class="small italic ">1 day ago</span>
-
-                                     </div>
-                                 </li>
-                                 <li>
-                                     <span class="label label-success"><i class="icon-bell"></i></span>
-                                     <span>New order received.</span>
-                                     <div class="pull-right">
-                                         <span class="small italic ">10 mins ago</span>
-
-                                     </div>
-                                 </li>
-                                 <li>
-                                     <span class="label label-warning"><i class="icon-bullhorn"></i></span>
-                                     <span>Alerting a user account balance.</span>
-                                     <div class="pull-right">
-                                         <span class="small italic ">3 hours ago</span>
-
-                                     </div>
-                                 </li>
-                                 <li>
-                                     <span class="label label-important"><i class=" icon-bug"></i></span>
-                                     <span>Alerting administrators support staff.</span>
-                                     <div class="pull-right">
-                                         <span class="small italic ">6 hours ago</span>
-
-                                     </div>
-                                 </li>
-                                 <li>
-                                     <span class="label label-important"><i class=" icon-bug"></i></span>
-                                     <span>Messages are not sent to users.</span>
-                                     <div class="pull-right">
-                                         <span class="small italic ">3 days ago</span>
-
-                                     </div>
-                                 </li>
-                                 <li>
-                                     <span class="label label-warning"><i class="icon-bullhorn"></i></span>
-                                     <span>Web server #12 failed to relosd.</span>
-                                     <div class="pull-right">
-                                         <span class="small italic ">1 day ago</span>
-
-                                     </div>
-                                 </li>
-                             </ul>
-                             <div class="space10"></div>
-                             <a href="#" class="pull-right">View all notifications</a>
-                             <div class="clearfix no-top-space no-bottom-space"></div>
-                         </div>
-                     </div>
-                     <!-- END NOTIFICATIONS PORTLET-->
-                 </div>
-                 <div class="span6">
-                     <!-- BEGIN CHAT PORTLET-->
-                     <div class="widget red">
-                         <div class="widget-title">
-                             <h4><i class="icon-comments-alt"></i>聊天</h4>
-									<span class="tools">
-									<a href="javascript:;" class="icon-chevron-down"></a>
-									<a href="javascript:;" class="icon-remove"></a>
-									</span>
-                         </div>
-                         <div class="widget-body">
-                             <div class="timeline-messages">
-                                 <!-- Comment -->
-                                 <div class="msg-time-chat">
-                                     <a class="message-img" href="#"><img alt="" src="img/avatar1.jpg" class="avatar"></a>
-                                     <div class="message-body msg-in">
-                                         <span class="arrow"></span>
-                                         <div class="text">
-                                             <p class="attribution"><a href="#">Jhon Doe</a> at 1:55pm, 13th April 2013</p>
-                                             <p>Hello, How are you brother?</p>
-                                         </div>
-                                     </div>
-                                 </div>
-                                 <!-- /comment -->
-
-                                 <!-- Comment -->
-                                 <div class="msg-time-chat">
-                                     <a class="message-img" href="#"><img alt="" src="img/avatar2.jpg" class="avatar"></a>
-                                     <div class="message-body msg-out">
-                                         <span class="arrow"></span>
-                                         <div class="text">
-                                             <p class="attribution"> <a href="#">Jonathan Smith</a> at 2:01pm, 13th April 2013</p>
-                                             <p>I'm Fine, Thank you. What about you? How is going on?</p>
-                                         </div>
-                                     </div>
-                                 </div>
-                                 <!-- /comment -->
-
-                                 <!-- Comment -->
-                                 <div class="msg-time-chat">
-                                     <a class="message-img" href="#"><img alt="" src="img/avatar1.jpg" class="avatar"></a>
-                                     <div class="message-body msg-in">
-                                         <span class="arrow"></span>
-                                         <div class="text">
-                                             <p class="attribution"><a href="#">Jhon Doe</a> at 2:03pm, 13th April 2013</p>
-                                             <p>Yeah I'm fine too. Everything is going fine here.</p>
-                                         </div>
-                                     </div>
-                                 </div>
-                                 <!-- /comment -->
-
-                                 <!-- Comment -->
-                                 <div class="msg-time-chat">
-                                     <a class="message-img" href="#"><img alt="" src="img/avatar2.jpg" class="avatar"></a>
-                                     <div class="message-body msg-out">
-                                         <span class="arrow"></span>
-                                         <div class="text">
-                                             <p class="attribution"><a href="#">Jonathan Smith</a> at 2:05pm, 13th April 2013</p>
-                                             <p>well good to know that. anyway how much time you need to done your task?</p>
-                                         </div>
-                                     </div>
-                                 </div>
-                                 <!-- /comment -->
-                             </div>
-                             <div class="chat-form">
-                                 <div class="input-cont">
-                                     <input type="text" placeholder="Type a message here..." />
-                                 </div>
-                                 <div class="btn-cont">
-                                     <a href="javascript:;" class="btn btn-primary">Send</a>
-                                 </div>
-                             </div>
-                         </div>
-                     </div>
-                     <!-- END CHAT PORTLET-->
-                 </div>
-             </div>
-            <div class="row-fluid">
-                <div class="span7 responsive" data-tablet="span7 fix-margin" data-desktop="span7">
-                    <!-- BEGIN CALENDAR PORTLET-->
-                    <div class="widget yellow">
-                        <div class="widget-title">
-                            <h4><i class="icon-calendar"></i> 日历</h4>
-                            <span class="tools">
-                                <a href="javascript:;" class="icon-chevron-down"></a>
-                                <a href="javascript:;" class="icon-remove"></a>
-                            </span>
-                        </div>
-                        <div class="widget-body">
-                            <div id="calendar" class="has-toolbar"></div>
-                        </div>
-                    </div>
-                    <!-- END CALENDAR PORTLET-->
-                </div>
-                <div class="span5">
-                    <!-- BEGIN PROGRESS PORTLET-->
-                    <div class="widget purple">
-                        <div class="widget-title">
-                            <h4><i class="icon-tasks"></i> 任务进度 </h4>
-                            <span class="tools">
-                                <a href="javascript:;" class="icon-chevron-down"></a>
-                                <a href="javascript:;" class="icon-remove"></a>
-                            </span>
-                        </div>
-                        <div class="widget-body">
-                            <ul class="unstyled">
-                                <li>
-                                    <span class="btn btn-inverse"> <i class="icon-refresh"></i></span>  Update Jquery <strong class="label"> 48%</strong>
-                                    <div class="space10"></div>
-                                    <div class="progress">
-                                        <div style="width: 48%;" class="bar"></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="btn btn-inverse"> <i class="icon-check"></i></span>  Update font awesome <strong class="label label-success"> 85%</strong>
-                                    <div class="space10"></div>
-                                    <div class="progress progress-success">
-                                        <div style="width: 85%;" class="bar"></div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <span class="btn btn-inverse"> <i class="icon-fire"></i></span>  Update CSS3 <strong class="label label-important"> 65%</strong>
-                                    <div class="space10"></div>
-                                    <div class="progress progress-danger">
-                                        <div style="width: 65%;" class="bar"></div>
-                                    </div>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- END PROGRESS PORTLET-->
-                    <!-- BEGIN ALERTS PORTLET-->
-                    <div class="widget orange">
-                        <div class="widget-title">
-                            <h4><i class="icon-bell-alt"></i> 警告提示</h4>
-                            <span class="tools">
-                            <a class="icon-chevron-down" href="javascript:;"></a>
-                            <a class="icon-remove" href="javascript:;"></a>
-                            </span>
-                        </div>
-                        <div class="widget-body">
-                            <div class="alert">
-                                <button data-dismiss="alert" class="close">×</button>
-                                <strong>Warning!</strong> Best check yo self, you're not looking too good.
-                            </div>
-                            <div class="alert alert-success">
-                                <button data-dismiss="alert" class="close">×</button>
-                                <strong>Success!</strong> You successfully read this important message.
-                            </div>
-                            <div class="alert alert-info">
-                                <button data-dismiss="alert" class="close">×</button>
-                                <strong>Info!</strong> Heads up! This alert needs your attention.
-                            </div>
-                            <div class="alert alert-error">
-                                <button data-dismiss="alert" class="close">×</button>
-                                <strong>Error!</strong> Change a few things. Please submit again.
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END ALERTS PORTLET-->
-                </div>
-            </div>
-
-            <!-- END PAGE CONTENT-->         
-         </div>
-         <!-- END PAGE CONTAINER-->
-      </div>
-      <!-- END PAGE -->  
-   </div>
-   <!-- END CONTAINER -->
-
-   <!-- BEGIN FOOTER -->
-   <div id="footer">
-       2013 &copy; MetroAdmin.
-   </div>
-   <!-- END FOOTER -->
-
-   <!-- BEGIN JAVASCRIPTS -->
-   <!-- Load javascripts at bottom, this will reduce page load time -->
-   <script src="js/jquery-1.8.3.min.js"></script>
-   <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
-   <script type="text/javascript" src="assets/jquery-slimscroll/jquery-ui-1.9.2.custom.min.js"></script>
-   <script type="text/javascript" src="assets/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-   <script src="assets/fullcalendar/fullcalendar/fullcalendar.min.js"></script>
-   <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-
-   <!-- ie8 fixes -->
-   <!--[if lt IE 9]>
-   <script src="js/excanvas.js"></script>
-   <script src="js/respond.js"></script>
-   <![endif]-->
-
-   <script src="assets/jquery-easy-pie-chart/jquery.easy-pie-chart.js" type="text/javascript"></script>
-   <script src="js/jquery.sparkline.js" type="text/javascript"></script>
-   <script src="assets/chart-master/Chart.js"></script>
-   <script src="js/jquery.scrollTo.min.js"></script>
+			],
+			lineColors:['#eb6f6f','#926383','#eb6f6f'],
+			xkey: 'period',
+            redraw: true,
+            ykeys: ['iphone', 'ipad', 'itouch'],
+            labels: ['All Visitors', 'Returning Visitors', 'Unique Visitors'],
+			pointSize: 2,
+			hideHover: 'auto',
+			resize: true
+		});
 
 
-   <!--common script for all pages-->
-   <script src="js/common-scripts.js"></script>
+	});
+	</script>
+<!-- calendar -->
+	<script type="text/javascript" src="js/monthly.js"></script>
+	<script type="text/javascript">
+		$(window).load( function() {
 
-   <!--script for this page only-->
+			$('#mycalendar').monthly({
+				mode: 'event',
 
-   <script src="js/easy-pie-chart.js"></script>
-   <script src="js/sparkline-chart.js"></script>
-   <script src="js/home-page-calender.js"></script>
-   <script src="js/home-chartjs.js"></script>
+			});
 
-   <!-- END JAVASCRIPTS -->   
+			$('#mycalendar2').monthly({
+				mode: 'picker',
+				target: '#mytarget',
+				setWidth: '250px',
+				startHidden: true,
+				showTrigger: '#mytarget',
+				stylePast: true,
+				disablePast: true
+			});
+
+		switch(window.location.protocol) {
+		case 'http:':
+		case 'https:':
+		// running on a server, should be good.
+		break;
+		case 'file:':
+		alert('Just a heads-up, events will not work when run locally.');
+		}
+
+		});
+	</script>
+	<!-- //calendar -->
 </body>
-<!-- END BODY -->
 </html>
