@@ -31,7 +31,7 @@
     <script src="js/raphael-min.js"></script>
     <script src="js/morris.js"></script>
 </head>
-<body>
+<body style="background:#f9f9f9;">
 <section id="container">
     <!--header start-->
     <header class="header fixed-top clearfix">
@@ -49,23 +49,22 @@
             <!--search & user info start-->
             <ul class="nav pull-right top-menu">
                 <li>
-                    <input type="text" class="form-control search" placeholder="搜索">
+                    <!--<input type="text" class="form-control search" placeholder="搜索">-->
                 </li>
                 <!-- user login dropdown start-->
                 <li class="dropdown">
-                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                        <img alt="" src="images/2.png">
-                        <span class="username">王小二</span>
+                    <a data-toggle="dropdown" style="border-radius:0;" class="dropdown-toggle" href="#">
+                        <i class="fa fa-user"></i>
+                        <span class="username">张凡森</span>
                         <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu extended logout">
-                        <li><a href="#"><i class=" fa fa-suitcase"></i>个人资料</a></li>
-                        <li><a href="#"><i class="fa fa-cog"></i>设置</a></li>
-                        <li><a href="login.html"><i class="fa fa-key"></i>注销</a></li>
+                        <li><a href="#"><i class=" fa fa-suitcase"></i>账号设置</a></li>
+                        <li><a href="#"><i class="fa fa-cog"></i>密码修改</a></li>
+                        <li><a href="login.html"><i class="fa fa-key"></i>退出登陆</a></li>
                     </ul>
                 </li>
                 <!-- user login dropdown end -->
-
             </ul>
             <!--search & user info end-->
         </div>
@@ -151,392 +150,122 @@
     <!--main content start-->
     <section id="main-content">
         <section class="wrapper">
-            <!-- //market-->
-            <div class="market-updates">
-                <div class="col-md-3 market-update-gd">
-                    <div class="market-update-block clr-block-2">
-                        <div class="col-md-4 market-update-right">
-                            <i class="fa fa-eye"> </i>
-                        </div>
-                        <div class="col-md-8 market-update-left">
-                            <h4>Visitors</h4>
-                            <h3>13,500</h3>
-                            <p>Other hand, we denounce</p>
-                        </div>
-                        <div class="clearfix"></div>
+            <div class="col-md-12 dzb-info">
+                <div class="info left">
+                    <div class="img">
+                        <i class="glyphicon glyphicon-home" style="font-size:45px;color: #78cffb;"></i>
+                    </div>
+                    <div class="count">
+                        <span>总人数：186 人</span>
                     </div>
                 </div>
-                <div class="col-md-3 market-update-gd">
-                    <div class="market-update-block clr-block-1">
-                        <div class="col-md-4 market-update-right">
-                            <i class="fa fa-users"></i>
-                        </div>
-                        <div class="col-md-8 market-update-left">
-                            <h4>Users</h4>
-                            <h3>1,250</h3>
-                            <p>Other hand, we denounce</p>
-                        </div>
-                        <div class="clearfix"></div>
+                <div class="dw left">
+                    <div class="dwmc">四川省成都市成华区双桥子街道办党委</div>
+                    <div class="account">
+                        账号：201801181705
                     </div>
                 </div>
-                <div class="col-md-3 market-update-gd">
-                    <div class="market-update-block clr-block-3">
-                        <div class="col-md-4 market-update-right">
-                            <i class="fa fa-usd"></i>
-                        </div>
-                        <div class="col-md-8 market-update-left">
-                            <h4>Sales</h4>
-                            <h3>1,500</h3>
-                            <p>Other hand, we denounce</p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-                <div class="col-md-3 market-update-gd">
-                    <div class="market-update-block clr-block-4">
-                        <div class="col-md-4 market-update-right">
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                        </div>
-                        <div class="col-md-8 market-update-left">
-                            <h4>Orders</h4>
-                            <h3>1,500</h3>
-                            <p>Other hand, we denounce</p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <!-- //market-->
-            <div class="row">
-                <div class="panel-body">
-                    <div class="col-md-12 w3ls-graph">
-                        <!--agileinfo-grap-->
-                        <div class="agileinfo-grap">
-                            <div class="agileits-box">
-                                <header class="agileits-box-header clearfix">
-                                    <h3>Visitor Statistics</h3>
-                                    <div class="toolbar">
-
-
-                                    </div>
-                                </header>
-                                <div class="agileits-box-body clearfix">
-                                    <div id="hero-area"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <!--//agileinfo-grap-->
-
+                <div class="ewm">
+                    <img src="images/2vm.png" alt="">
+                    <div class="word">
+                        扫描二维码获取客户端
                     </div>
                 </div>
             </div>
-            <div class="agil-info-calendar">
-                <!-- calendar -->
-                <div class="col-md-6 agile-calendar">
-                    <div class="calendar-widget">
-                        <div class="panel-heading ui-sortable-handle">
-					<span class="panel-icon">
-                      <i class="fa fa-calendar-o"></i>
-                    </span>
-                            <span class="panel-title"> Calendar Widget</span>
-                        </div>
-                        <!-- grids -->
-                        <div class="agile-calendar-grid">
-                            <div class="page">
-
-                                <div class="w3l-calendar-left">
-                                    <div class="calendar-heading">
-
-                                    </div>
-                                    <div class="monthly" id="mycalendar"></div>
-                                </div>
-
-                                <div class="clearfix"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- //calendar -->
-                <div class="col-md-6 w3agile-notifications">
-                    <div class="notifications">
-                        <!--notification start-->
-
-                        <header class="panel-heading">
-                            Notification
-                        </header>
-                        <div class="notify-w3ls">
-                            <div class="alert alert-info clearfix">
-                                <span class="alert-icon"><i class="fa fa-envelope-o"></i></span>
-                                <div class="notification-info">
-                                    <ul class="clearfix notification-meta">
-                                        <li class="pull-left notification-sender"><span><a
-                                                href="#">Jonathan Smith</a></span> send you a mail
-                                        </li>
-                                        <li class="pull-right notification-time">1 min ago</li>
-                                    </ul>
-                                    <p>
-                                        Urgent meeting for next proposal
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="alert alert-danger">
-                                <span class="alert-icon"><i class="fa fa-facebook"></i></span>
-                                <div class="notification-info">
-                                    <ul class="clearfix notification-meta">
-                                        <li class="pull-left notification-sender"><span><a
-                                                href="#">Jonathan Smith</a></span> mentioned you in a post
-                                        </li>
-                                        <li class="pull-right notification-time">7 Hours Ago</li>
-                                    </ul>
-                                    <p>
-                                        Very cool photo jack
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="alert alert-success ">
-                                <span class="alert-icon"><i class="fa fa-comments-o"></i></span>
-                                <div class="notification-info">
-                                    <ul class="clearfix notification-meta">
-                                        <li class="pull-left notification-sender">You have 5 message unread</li>
-                                        <li class="pull-right notification-time">1 min ago</li>
-                                    </ul>
-                                    <p>
-                                        <a href="#">Anjelina Mewlo, Jack Flip</a> and <a href="#">3 others</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="alert alert-warning ">
-                                <span class="alert-icon"><i class="fa fa-bell-o"></i></span>
-                                <div class="notification-info">
-                                    <ul class="clearfix notification-meta">
-                                        <li class="pull-left notification-sender">Domain Renew Deadline 7 days ahead
-                                        </li>
-                                        <li class="pull-right notification-time">5 Days Ago</li>
-                                    </ul>
-                                    <p>
-                                        Next 5 July Thursday is the last day
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="alert alert-info clearfix">
-                                <span class="alert-icon"><i class="fa fa-envelope-o"></i></span>
-                                <div class="notification-info">
-                                    <ul class="clearfix notification-meta">
-                                        <li class="pull-left notification-sender"><span><a
-                                                href="#">Jonathan Smith</a></span> send you a mail
-                                        </li>
-                                        <li class="pull-right notification-time">1 min ago</li>
-                                    </ul>
-                                    <p>
-                                        Urgent meeting for next proposal
-                                    </p>
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <!--notification end-->
-                    </div>
-                </div>
-                <div class="clearfix"></div>
+            <div class="col-md-12 yy-title">
+                已安装的应用
             </div>
-            <!-- tasks -->
-            <div class="agile-last-grids">
-                <div class="col-md-4 agile-last-left">
-                    <div class="agile-last-grid">
-                        <div class="area-grids-heading">
-                            <h3>Monthly</h3>
+            <div class="col-md-12 yy-info clearfix">
+                <ul class="clearfix">
+                    <li><a class="vj-4e5bc94e42" href="javascript:;">
+                        <div class="vj-e19d852b17"><img src="https://img.51zhdj.cn/app_center/default/icon_xw.png">
                         </div>
-                        <div id="graph7"></div>
-                        <script>
-                            // This crosses a DST boundary in the UK.
-                            Morris.Area({
-                                element: 'graph7',
-                                data: [
-                                    {x: '2013-03-30 22:00:00', y: 3, z: 3},
-                                    {x: '2013-03-31 00:00:00', y: 2, z: 0},
-                                    {x: '2013-03-31 02:00:00', y: 0, z: 2},
-                                    {x: '2013-03-31 04:00:00', y: 4, z: 4}
-                                ],
-                                xkey: 'x',
-                                ykeys: ['y', 'z'],
-                                labels: ['Y', 'Z']
-                            });
-                        </script>
-
-                    </div>
-                </div>
-                <div class="col-md-4 agile-last-left agile-last-middle">
-                    <div class="agile-last-grid">
-                        <div class="area-grids-heading">
-                            <h3>Daily</h3>
+                        <p>党建要闻</p></a></li>
+                    <li><a class="vj-4e5bc94e42" href="javascript:;">
+                        <div class="vj-e19d852b17"><img src="https://img.51zhdj.cn/app_center/default/icon_tz.png">
                         </div>
-                        <div id="graph8"></div>
-                        <script>
-                            /* data stolen from http://howmanyleft.co.uk/vehicle/jaguar_'e'_type */
-                            var day_data = [
-                                {"period": "2016-10-01", "licensed": 3407, "sorned": 660},
-                                {"period": "2016-09-30", "licensed": 3351, "sorned": 629},
-                                {"period": "2016-09-29", "licensed": 3269, "sorned": 618},
-                                {"period": "2016-09-20", "licensed": 3246, "sorned": 661},
-                                {"period": "2016-09-19", "licensed": 3257, "sorned": 667},
-                                {"period": "2016-09-18", "licensed": 3248, "sorned": 627},
-                                {"period": "2016-09-17", "licensed": 3171, "sorned": 660},
-                                {"period": "2016-09-16", "licensed": 3171, "sorned": 676},
-                                {"period": "2016-09-15", "licensed": 3201, "sorned": 656},
-                                {"period": "2016-09-10", "licensed": 3215, "sorned": 622}
-                            ];
-                            Morris.Bar({
-                                element: 'graph8',
-                                data: day_data,
-                                xkey: 'period',
-                                ykeys: ['licensed', 'sorned'],
-                                labels: ['Licensed', 'SORN'],
-                                xLabelAngle: 60
-                            });
-                        </script>
-                    </div>
-                </div>
-                <div class="col-md-4 agile-last-left agile-last-right">
-                    <div class="agile-last-grid">
-                        <div class="area-grids-heading">
-                            <h3>Yearly</h3>
+                        <p>通知公告</p></a></li>
+                    <li><a class="vj-4e5bc94e42" href="javascript:;">
+                        <div class="vj-e19d852b17"><img src="https://img.51zhdj.cn/app_center/default/icon_gs.png">
                         </div>
-                        <div id="graph9"></div>
-                        <script>
-                            var day_data = [
-                                {"elapsed": "I", "value": 34},
-                                {"elapsed": "II", "value": 24},
-                                {"elapsed": "III", "value": 3},
-                                {"elapsed": "IV", "value": 12},
-                                {"elapsed": "V", "value": 13},
-                                {"elapsed": "VI", "value": 22},
-                                {"elapsed": "VII", "value": 5},
-                                {"elapsed": "VIII", "value": 26},
-                                {"elapsed": "IX", "value": 12},
-                                {"elapsed": "X", "value": 19}
-                            ];
-                            Morris.Line({
-                                element: 'graph9',
-                                data: day_data,
-                                xkey: 'elapsed',
-                                ykeys: ['value'],
-                                labels: ['value'],
-                                parseTime: false
-                            });
-                        </script>
-
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-            <!-- //tasks -->
-            <div class="agileits-w3layouts-stats">
-                <div class="col-md-4 stats-info widget">
-                    <div class="stats-info-agileits">
-                        <div class="stats-title">
-                            <h4 class="title">Browser Stats</h4>
+                        <p>党内通报</p></a></li>
+                    <li><a class="vj-4e5bc94e42" href="javascript:;">
+                        <div class="vj-e19d852b17"><img src="https://img.51zhdj.cn/app_center/default/icon_rdjn.png">
                         </div>
-                        <div class="stats-body">
-                            <ul class="list-unstyled">
-                                <li>GoogleChrome <span class="pull-right">85%</span>
-                                    <div class="progress progress-striped active progress-right">
-                                        <div class="bar green" style="width:85%;"></div>
-                                    </div>
-                                </li>
-                                <li>Firefox <span class="pull-right">35%</span>
-                                    <div class="progress progress-striped active progress-right">
-                                        <div class="bar yellow" style="width:35%;"></div>
-                                    </div>
-                                </li>
-                                <li>Internet Explorer <span class="pull-right">78%</span>
-                                    <div class="progress progress-striped active progress-right">
-                                        <div class="bar red" style="width:78%;"></div>
-                                    </div>
-                                </li>
-                                <li>Safari <span class="pull-right">50%</span>
-                                    <div class="progress progress-striped active progress-right">
-                                        <div class="bar blue" style="width:50%;"></div>
-                                    </div>
-                                </li>
-                                <li>Opera <span class="pull-right">80%</span>
-                                    <div class="progress progress-striped active progress-right">
-                                        <div class="bar light-blue" style="width:80%;"></div>
-                                    </div>
-                                </li>
-                                <li class="last">Others <span class="pull-right">60%</span>
-                                    <div class="progress progress-striped active progress-right">
-                                        <div class="bar orange" style="width:60%;"></div>
-                                    </div>
-                                </li>
-                            </ul>
+                        <p>入党纪念</p></a></li>
+                    <li><a class="vj-4e5bc94e42" href="javascript:;">
+                        <div class="vj-e19d852b17"><img src="https://img.51zhdj.cn/app_center/default/icon_hdxc.png">
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-8 stats-info stats-last widget-shadow">
-                    <div class="stats-last-agile">
-                        <table class="table stats-table ">
-                            <thead>
-                            <tr>
-                                <th>S.NO</th>
-                                <th>PRODUCT</th>
-                                <th>STATUS</th>
-                                <th>PROGRESS</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Lorem ipsum</td>
-                                <td><span class="label label-success">In progress</span></td>
-                                <td><h5>85% <i class="fa fa-level-up"></i></h5></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Aliquam</td>
-                                <td><span class="label label-warning">New</span></td>
-                                <td><h5>35% <i class="fa fa-level-up"></i></h5></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Lorem ipsum</td>
-                                <td><span class="label label-danger">Overdue</span></td>
-                                <td><h5 class="down">40% <i class="fa fa-level-down"></i></h5></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">4</th>
-                                <td>Aliquam</td>
-                                <td><span class="label label-info">Out of stock</span></td>
-                                <td><h5>100% <i class="fa fa-level-up"></i></h5></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">5</th>
-                                <td>Lorem ipsum</td>
-                                <td><span class="label label-success">In progress</span></td>
-                                <td><h5 class="down">10% <i class="fa fa-level-down"></i></h5></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">6</th>
-                                <td>Aliquam</td>
-                                <td><span class="label label-warning">New</span></td>
-                                <td><h5>38% <i class="fa fa-level-up"></i></h5></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
+                        <p>党建相册</p></a></li>
+                    <li><a class="vj-4e5bc94e42" href="javascript:;">
+                        <div class="vj-e19d852b17"><img src="https://img.51zhdj.cn/app_center/default/icon_jyxx.png">
+                        </div>
+                        <p>专题教育</p></a></li>
+                    <li><a class="vj-4e5bc94e42" href="javascript:;">
+                        <div class="vj-e19d852b17"><img src="https://img.51zhdj.cn/app_center/default/icon_ffcl.png">
+                        </div>
+                        <p>反腐倡廉</p></a></li>
+                    <li><a class="vj-4e5bc94e42" href="javascript:;">
+                        <div class="vj-e19d852b17"><img src="https://img.51zhdj.cn/app_center/default/icon_zcfg.png">
+                        </div>
+                        <p>政策法规</p></a></li>
+                    <li><a class="vj-4e5bc94e42" href="javascript:;">
+                        <div class="vj-e19d852b17"><img src="https://img.51zhdj.cn/app_center/default/icon_ks.png">
+                        </div>
+                        <p>在线考试</p></a></li>
+                    <li><a class="vj-4e5bc94e42" href="javascript:;1">
+                        <div class="vj-e19d852b17"><img src="https://img.51zhdj.cn/app_center/default/icon_hdbm.png">
+                        </div>
+                        <p>活动报名</p></a></li>
+                    <li><a class="vj-4e5bc94e42" href="javascript:;">
+                        <div class="vj-e19d852b17"><img src="https://img.51zhdj.cn/app_center/default/icon_lt.png">
+                        </div>
+                        <p>党员论坛</p></a></li>
+                    <li><a class="vj-4e5bc94e42" href="javascript:;">
+                        <div class="vj-e19d852b17"><img src="https://img.51zhdj.cn/app_center/default/icon_rwgl.png">
+                        </div>
+                        <p>任务管理</p></a></li>
+                    <li><a class="vj-4e5bc94e42" href="javascript:;">
+                        <div class="vj-e19d852b17"><img src="https://img.51zhdj.cn/app_center/default/icon_zzjg.png">
+                        </div>
+                        <p>党员档案</p></a></li>
+                    <li><a class="vj-4e5bc94e42" href="javascript:;">
+                        <div class="vj-e19d852b17"><img src="https://img.51zhdj.cn/app_center/default/icon_tpdy.png">
+                        </div>
+                        <p>投票调研</p></a></li>
+                    <li><a class="vj-4e5bc94e42" href="javascript:;">
+                        <div class="vj-e19d852b17"><img src="https://img.51zhdj.cn/app_center/default/icon_wdsc.png">
+                        </div>
+                        <p>我的收藏</p></a></li>
+                    <li><a class="vj-4e5bc94e42" href="javascript:;">
+                        <div class="vj-e19d852b17"><img src="https://img.51zhdj.cn/app_center/default/icon_dfjn.png">
+                        </div>
+                        <p>党费收缴</p></a></li>
+                    <li><a class="vj-4e5bc94e42" href="javascript:;">
+                        <div class="vj-e19d852b17"><img src="https://img.51zhdj.cn/app_center/default/icon_wdjf.png">
+                        </div>
+                        <p>我的积分</p></a></li>
+                    <li><a class="vj-4e5bc94e42" href="javascript:;">
+                        <div class="vj-e19d852b17"><img src="https://img.51zhdj.cn/app_center/default/icon_wyfk.png">
+                        </div>
+                        <p>我要反馈</p></a></li>
+                    <li><a class="vj-4e5bc94e42" href="javascript:;">
+                        <div class="vj-e19d852b17"><img src="https://img.51zhdj.cn/app_center/default/icon_dang.png">
+                        </div>
+                        <p>入党申请</p></a></li>
+                    <li><a class="vj-4e5bc94e42" href="javascript:;">
+                        <div class="vj-e19d852b17"><img src="https://img.51zhdj.cn/app_center/default/icon_dcqd.png">
+                        </div>
+                        <p>快捷签到</p></a></li>
+                </ul>
             </div>
         </section>
         <!-- footer -->
-        <div class="footer">
+        <!--<div class="footer">
             <div class="wthree-copyright">
-                <p>
-                    Copyright &copy; 2018.Company name All rights reserved.
-                </p>
+                <p>Copyright &copy; 2017.Company name All rights reserved.</p>
             </div>
-        </div>
+        </div>-->
         <!-- / footer -->
     </section>
     <!--main content end-->

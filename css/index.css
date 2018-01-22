@@ -1,3 +1,23 @@
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.clearfix:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+ul,li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    color: #333;
+    text-decoration: none;
+}
 .logo{
     margin: 10px 0 0 10px !important;
 }
@@ -13,3 +33,93 @@
 .search{
     width: 120px;
 }
+
+.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
+    background-color: #ab3239;
+}
+
+.dzb-info{
+    background-color: #fff;
+    height: 200px;
+    border-radius: 3px;
+    clear: both;
+}
+
+.dzb-info .info{
+    padding-top: 60px;
+    text-align: center;
+    width: 200px;
+    float:left;
+}
+
+.dzb-info .info .count{
+    margin-top: 15px;
+}
+.dzb-info .dw{
+    font-size: 20px;
+    line-height: 30px;
+    margin-left: 25px;
+    float:left;
+    width: 350px;
+}
+.dzb-info .dw .dwmc{
+    margin-top: 80px;
+}
+.dzb-info .dw .account{
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.dzb-info .ewm{
+    text-align: center;
+    float: right;
+    width: 200px;
+    height: 100%;
+    margin-right: 15px;
+
+}
+.dzb-info .ewm img{
+    margin-top: 25px;
+    width: 130px;
+}
+.dzb-info .ewm .word{
+    font-size: 13px;
+    color: #333333;
+}
+.yy-title{
+    margin: 15px 0;
+    font-size: 18px;
+    color: #333;
+}
+.yy-info{
+    padding: 30px 30px;
+    background-color: #fff;
+}
+
+.yy-info li p{
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.yy-info li{
+    float:left;
+    margin:0 40px 20px 0;
+}
+.yy-info li img{
+    width: 70px;
+    height: 70px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
