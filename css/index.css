@@ -132,10 +132,15 @@ a{
 }
 
 /*组织机构样式*/
+.table-agile-info{
+    border-left: 1px dashed #ccc;
+    background: #eef9f0;
+    border-radius:0;
+}
 .jgsz{
     width: 100%;
     min-height: 200px;
-    background-color: #fff;
+    background-color: #eef9f0;
     font-size: 14px;
 }
 .jgsz .left-tree{
@@ -143,17 +148,35 @@ a{
     /*height: 1000px;*/
 }
 .jgsz .left-tree .title{
-    font-size: 16px;
-    padding: 10px 10px;
-    border-bottom: 1px #ccc solid;
-    color: #333333;
-    font-weight: bold;
+    text-align: center;
+    margin:30px 0 15px 0;
+    height:57px;
+    line-height: 57px;
+    font-size: 20px;
+    color: #000000;
+    background-color: #ddede0;
+    border-color: #ddede0 ! important;
 }
 
 .ztree *{
     font-size: 16px !important;
 }
-
+.ztree ul.level0{
+    margin-top: 5px;
+}
+/*.ztree .level2 .node_name,.ztree .level1 .node_name{
+    position: relative;
+    left: -16px;
+    background-color: #eef9f0;
+}*/
+.ztree .level2{
+    margin: 5px 0;
+}
+/*.ztree .level2.curSelectedNode,.ztree .level1.curSelectedNode{
+    margin: 5px 0;
+    background-color: #afbab1;
+    border:0;
+}*/
 .jgsz .right-content{
     width: calc(100% - 200px);
     /*min-height: 1000px;*/
