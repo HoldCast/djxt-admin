@@ -18,7 +18,18 @@ a{
     color: #333;
     text-decoration: none;
 }
-
+input::-webkit-input-placeholder { /* WebKit browsers*/
+    color:#999;
+}
+input:-moz-placeholder {  /* Mozilla Firefox 4 to 18*/
+    color:#999;
+}
+input::-moz-placeholder {  /* Mozilla Firefox 19+*/
+    color:#999;
+}
+input:-ms-input-placeholder { /* Internet Explorer 10+*/
+    color:#999;
+}
 
 .logo{
     margin: 10px 0 0 10px !important;
@@ -211,6 +222,9 @@ a{
     height: 80px;
     width: 5px;
     background: #0B61A4;
+}
+.jgsz .right-content table span.cz{
+    cursor: pointer;
 }
 
 /*数据统计*/

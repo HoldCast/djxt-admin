@@ -307,7 +307,7 @@
             </div>
         </section>
         <!--机构设置-->
-        <section class="wrapper" id="jgsz" >
+        <section class="wrapper" id="jgsz">
             <div class="jgsz clearfix">
                 <div class="left-tree pull-left">
                     <!-- Button trigger modal -->
@@ -352,7 +352,9 @@
                             </div>
                             <div class="row w3-res-tb">
                                 <div class="col-sm-5 m-b-xs">
-                                    <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#zzModal">添加子组织</button>
+                                    <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#zzModal">
+                                        添加组织
+                                    </button>
                                     <!--<button class="btn btn-sm btn-primary">编辑本组织</button>-->
                                     <select class="input-sm form-control w-sm inline v-middle">
                                         <option value="0">街道社区党支部</option>
@@ -388,14 +390,14 @@
                                           "enabled": true
                                         }}'>
                                     <thead>
-                                        <tr>
-                                            <th data-breakpoints="xs">序号</th>
-                                            <th>党支部名称</th>
-                                            <th>党支部类型</th>
-                                            <th>所属管辖</th>
-                                            <th data-breakpoints="xs sm md" data-title="DOB">建立时间</th>
-                                            <th>操作</th>
-                                        </tr>
+                                    <tr>
+                                        <th data-breakpoints="xs">序号</th>
+                                        <th>党支部名称</th>
+                                        <th>党支部类型</th>
+                                        <th>所属管辖</th>
+                                        <th data-breakpoints="xs sm md" data-title="DOB">建立时间</th>
+                                        <th>操作</th>
+                                    </tr>
                                     </thead>
                                     <tbody id="zzjgTable">
                                     <tr data-expanded="true">
@@ -405,9 +407,9 @@
                                         <td>新鸿社区</td>
                                         <td>2006-12-18</td>
                                         <td>
-                                            <span>编辑</span>
-                                            <span>详情</span>
-                                            <span>删除</span>
+                                            <span><button class="btn btn-default btn-xs" data-target="#zzEdit">编辑</button></span>
+                                            <span><button class="btn btn-default btn-xs">详情</button></span>
+                                            <span><button class="btn btn-default btn-xs">删除</button></span>
                                         </td>
                                     </tr>
                                     <tr>
@@ -417,9 +419,9 @@
                                         <td>猛追湾社区</td>
                                         <td>2003-09-12</td>
                                         <td>
-                                            <span>编辑</span>
-                                            <span>详情</span>
-                                            <span>删除</span>
+                                            <span><button class="btn btn-default btn-xs" data-target="#zzEdit">编辑</button></span>
+                                            <span><button class="btn btn-default btn-xs">详情</button></span>
+                                            <span><button class="btn btn-default btn-xs">删除</button></span>
                                         </td>
                                     </tr>
                                     <tr>
@@ -429,9 +431,9 @@
                                         <td>沙河社区</td>
                                         <td>2003-09-12</td>
                                         <td>
-                                            <span>编辑</span>
-                                            <span>详情</span>
-                                            <span>删除</span>
+                                            <span><button class="btn btn-default btn-xs" data-target="#zzEdit">编辑</button></span>
+                                            <span><button class="btn btn-default btn-xs">详情</button></span>
+                                            <span><button class="btn btn-default btn-xs">删除</button></span>
                                         </td>
                                     </tr>
                                     </tbody>
@@ -461,11 +463,13 @@
 
 
             <!-- 添加组织机构 -->
-            <div class="modal fade bs-example-modal-lg" id="zzModal"  tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+            <div class="modal fade bs-example-modal-lg" id="zzModal" tabindex="-1" role="dialog"
+                 aria-labelledby="myLargeModalLabel">
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
                             <h4 class="modal-title" id="myModalLabel2">添加组织机构</h4>
                         </div>
                         <div class="modal-body">
@@ -505,17 +509,20 @@
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal" id="saveAddzzjg">确定</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" id="saveAddzzjg">添加
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- 党员信息展示 -->
-            <div class="modal fade bs-example-modal-lg" id="dyxxModal"  tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+            <div class="modal fade bs-example-modal-lg" id="dyxxModal" tabindex="-1" role="dialog"
+                 aria-labelledby="myLargeModalLabel">
                 <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
                             <h4 class="modal-title">党员信息</h4>
                         </div>
                         <div class="modal-body">
@@ -544,7 +551,7 @@
 
         </section>
         <!--数据统计-->
-        <section class="wrapper" id="sjtj" >
+        <section class="wrapper" id="sjtj">
             <div class="sjtj">
                 数据统计
             </div>
@@ -592,7 +599,6 @@
         }
 
 
-
     });
 </script>
 <!-- calendar -->
@@ -628,9 +634,9 @@
         }
         $('.form_date').datetimepicker({
             format: 'yyyy-mm-dd',
-            language:  'zh-CN',
+            language: 'zh-CN',
             weekStart: 1,
-            todayBtn:  1,
+            todayBtn: 1,
             autoclose: 1,
             todayHighlight: 1,
             startView: 2,
@@ -642,29 +648,30 @@
             $('#zzModal form')[0].reset();
         })
     }
+
     function switchMenu() {
         $('#main-content section').hide();
         $('#jgsz').show();
-        $('#nav-accordion  li').off('click.a').on('click.a',function () {
+        $('#nav-accordion  li').off('click.a').on('click.a', function () {
             var $this = $(this);
             var type = $this.attr('type');
 
-            if(type){
+            if (type) {
                 $('#main-content section').hide();
                 $('#' + type).show();
             }
             console.log(type);
         });
-        $('#saveAddzzjg').off('click').on('click',function () {
+        $('#saveAddzzjg').off('click').on('click', function () {
             var data = {
                 dzbmc: $('#dzbmc').val(),
                 dzblx: $('#dzblx').val(),
                 ssgx: $('#ssgx').val(),
                 jlsj: $('#jlsj').val()
             };
-            for(var k in data){
+            for (var k in data) {
                 var v = data[k];
-                if(!v){
+                if (!v) {
                     alert('请输入值');
                     return false;
                 }
@@ -672,17 +679,18 @@
             console.log(data);
         });
     }
+
     function zzjgTree() {
-        var zNodes =[
-            { id:1, pId:0, name:"双桥子街道党工委", open:true},
-            { id:11, pId:1, name:"新鸿社区党委",lx:'街道社区党支部',gx:'新鸿社区',sj:'2003-11-08',open:true},
-            { id:111, pId:11, name:"居委会党支部",lx:'其他党支部',gx:'新鸿社区',sj:'2003-11-08',iconClose:true},
-            { id:112, pId:11, name:"电视台党支部",lx:'其他党支部',gx:'新鸿社区',sj:'2003-11-08'},
-            { id:113, pId:11, name:"印刷公司党支部",lx:'企业党支部',gx:'新鸿社区',sj:'2003-11-08'},
-            { id:12, pId:1, name:"猛追湾社区党委",lx:'社区党支部',gx:'猛追湾社区',sj:'2001-11-08',open:true},
-            { id:121, pId:12, name:"居委会党支部",x:'其他党支部',gx:'猛追湾社区',sj:'2001-11-08'},
-            { id:122, pId:12, name:"国电党支部",x:'企业党支部',gx:'猛追湾社区',sj:'2001-11-08',},
-            { id:13, pId:1, name:"沙河社区党委",lx:'社区党支部',gx:'沙河社区',sj:'2005-11-08', isParent:true}
+        var zNodes = [
+            {id: 1, pId: 0, name: "双桥子街道党工委", open: true},
+            {id: 11, pId: 1, name: "新鸿社区党委", lx: '街道社区党支部', gx: '新鸿社区', sj: '2003-11-08', open: true},
+            {id: 111, pId: 11, name: "居委会党支部", lx: '其他党支部', gx: '新鸿社区', sj: '2003-11-08', iconClose: true},
+            {id: 112, pId: 11, name: "电视台党支部", lx: '其他党支部', gx: '新鸿社区', sj: '2003-11-08'},
+            {id: 113, pId: 11, name: "印刷公司党支部", lx: '企业党支部', gx: '新鸿社区', sj: '2003-11-08'},
+            {id: 12, pId: 1, name: "猛追湾社区党委", lx: '社区党支部', gx: '猛追湾社区', sj: '2001-11-08', open: true},
+            {id: 121, pId: 12, name: "居委会党支部", x: '其他党支部', gx: '猛追湾社区', sj: '2001-11-08'},
+            {id: 122, pId: 12, name: "国电党支部", x: '企业党支部', gx: '猛追湾社区', sj: '2001-11-08',},
+            {id: 13, pId: 1, name: "沙河社区党委", lx: '社区党支部', gx: '沙河社区', sj: '2005-11-08', isParent: true}
         ];
         var setting = {
             view: {
@@ -694,24 +702,25 @@
                     txtSelectedEnable: false
                 }
             },
-            callback:{
+            callback: {
                 onClick: function (event, treeId, treeNode) {
                     var name = treeNode.name;
-                    if(treeNode.pId <=1){
+                    if (treeNode.pId <= 1) {
                         $('#zzjgTableName').text(name);
                         var tableData = treeNode.children;
                         $('#zzjgTable').empty();
-                        for(var i=0;i<tableData.length;i++){
+                        for (var i = 0; i < tableData.length; i++) {
                             var tRow = tableData[i];
                             var html = '<tr data-expanded="true">' +
-                                '<td>'+tRow.name+'</td>' +
-                                '<td>'+tRow.lx+'</td>' +
-                                '<td>'+tRow.gx+'</td>' +
-                                '<td>'+tRow.sj+'</td>' +
+                                '<td>' + (i + 1) + '</td>' +
+                                '<td>' + tRow.name + '</td>' +
+                                '<td>' + tRow.lx + '</td>' +
+                                '<td>' + tRow.gx + '</td>' +
+                                '<td>' + tRow.sj + '</td>' +
                                 '<td>' +
-                                '<span>编辑</span>\n' +
-                                '<span>详情</span>\n' +
-                                '<span>删除</span>' +
+                                '<span><button class="btn btn-default btn-xs" data-target="#zzEdit">编辑</button></span>\n' +
+                                '<span><button class="btn btn-default btn-xs">详情</button></span>\n' +
+                                '<span><button class="btn btn-default btn-xs">删除</button></span>' +
                                 '</td>' +
                                 '</tr>';
                             $('#zzjgTable').append(html);
@@ -724,6 +733,7 @@
                 }
             }
         };
+
         function showIconForTree(treeId, treeNode) {
             //return !treeNode.isParent;
         };
