@@ -14,6 +14,7 @@
     } </script>
     <!-- bootstrap-css -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css">
     <!-- //bootstrap-css -->
     <!-- Custom CSS -->
     <link href="css/style.css" rel='stylesheet' type='text/css'/>
@@ -352,7 +353,7 @@
                             <div class="row w3-res-tb">
                                 <div class="col-sm-5 m-b-xs">
                                     <button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#zzModal">添加子组织</button>
-                                    <button class="btn btn-sm btn-primary">编辑本组织</button>
+                                    <!--<button class="btn btn-sm btn-primary">编辑本组织</button>-->
                                     <select class="input-sm form-control w-sm inline v-middle">
                                         <option value="0">街道社区党支部</option>
                                         <option value="1">企业党支部</option>
@@ -396,7 +397,7 @@
                                             <th>操作</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
+                                    <tbody id="zzjgTable">
                                     <tr data-expanded="true">
                                         <td>1</td>
                                         <td>新鸿社区党委</td>
@@ -404,7 +405,7 @@
                                         <td>新鸿社区</td>
                                         <td>2006-12-18</td>
                                         <td>
-                                            <span>修改</span>
+                                            <span>编辑</span>
                                             <span>详情</span>
                                             <span>删除</span>
                                         </td>
@@ -416,7 +417,19 @@
                                         <td>猛追湾社区</td>
                                         <td>2003-09-12</td>
                                         <td>
-                                            <span>修改</span>
+                                            <span>编辑</span>
+                                            <span>详情</span>
+                                            <span>删除</span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>沙河社区党委</td>
+                                        <td>街道社区党支部</td>
+                                        <td>沙河社区</td>
+                                        <td>2003-09-12</td>
+                                        <td>
+                                            <span>编辑</span>
                                             <span>详情</span>
                                             <span>删除</span>
                                         </td>
@@ -466,19 +479,26 @@
                                 <div class="form-group">
                                     <label for="dzblx" class="col-sm-2 control-label">党支部类型</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="dzblx" placeholder="党支部类型">
+                                        <select class="form-control" id="ssgx">
+                                            <option value="街道社区党支部">街道社区党支部</option>
+                                            <option value="企业党支部">企业党支部</option>
+                                            <option value="机关党支部">机关党支部</option>
+                                            <option value="学校党支部">学校党支部</option>
+                                            <option value="连队党支部">连队党支部</option>
+                                            <option value="农村党支部">农村党支部</option>
+                                        </select>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="ssgx" class="col-sm-2 control-label">所属管辖</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="ssgx" placeholder="党支部类型">
+                                        <input type="text" class="form-control" id="dzblx">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="jlsj" class="col-sm-2 control-label">建立时间</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="jlsj" placeholder="建立时间">
+                                        <input type="text" class="form-control form_date" id="jlsj" placeholder="建立时间">
                                     </div>
                                 </div>
                             </form>
@@ -541,6 +561,8 @@
     <!--main content end-->
 </section>
 <script src="js/bootstrap.js"></script>
+<script src="js/bootstrap-datetimepicker.js"></script>
+<script src="js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
 <script src="js/jquery.dcjqaccordion.2.7.js"></script>
 <script src="js/scripts.js"></script>
 <script src="js/jquery.slimscroll.js"></script>
@@ -604,6 +626,21 @@
             case 'file:':
                 alert('Just a heads-up, events will not work when run locally.');
         }
+        $('.form_date').datetimepicker({
+            format: 'yyyy-mm-dd',
+            language:  'zh-CN',
+            weekStart: 1,
+            todayBtn:  1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            minView: 2,
+            forceParse: 0
+        });
+
+        $('#zzModal').on('show.bs.modal', function (e) {
+            $('#zzModal form')[0].reset();
+        })
     }
     function switchMenu() {
         $('#main-content section').hide();
@@ -619,7 +656,20 @@
             console.log(type);
         });
         $('#saveAddzzjg').off('click').on('click',function () {
-            alert(1);
+            var data = {
+                dzbmc: $('#dzbmc').val(),
+                dzblx: $('#dzblx').val(),
+                ssgx: $('#ssgx').val(),
+                jlsj: $('#jlsj').val()
+            };
+            for(var k in data){
+                var v = data[k];
+                if(!v){
+                    alert('请输入值');
+                    return false;
+                }
+            }
+            console.log(data);
         });
     }
     function zzjgTree() {
@@ -649,7 +699,26 @@
                     var name = treeNode.name;
                     if(treeNode.pId <=1){
                         $('#zzjgTableName').text(name);
+                        var tableData = treeNode.children;
+                        $('#zzjgTable').empty();
+                        for(var i=0;i<tableData.length;i++){
+                            var tRow = tableData[i];
+                            var html = '<tr data-expanded="true">' +
+                                '<td>'+tRow.name+'</td>' +
+                                '<td>'+tRow.lx+'</td>' +
+                                '<td>'+tRow.gx+'</td>' +
+                                '<td>'+tRow.sj+'</td>' +
+                                '<td>' +
+                                '<span>编辑</span>\n' +
+                                '<span>详情</span>\n' +
+                                '<span>删除</span>' +
+                                '</td>' +
+                                '</tr>';
+                            $('#zzjgTable').append(html);
+                        }
                     }
+
+
                     console.log(treeNode)
                     //$('#dyxxModal').modal('show')
                 }
