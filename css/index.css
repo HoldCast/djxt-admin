@@ -145,13 +145,13 @@ input:-ms-input-placeholder { /* Internet Explorer 10+*/
 /*组织机构样式*/
 .table-agile-info{
     border-left: 1px dashed #ccc;
-    background: #eef9f0;
+    background: #fff;
     border-radius:0;
 }
 .jgsz{
     width: 100%;
     min-height: 200px;
-    background-color: #eef9f0;
+    background-color: #fff;
     font-size: 14px;
 }
 .jgsz .left-tree{

@@ -407,7 +407,7 @@
                                         <td>新鸿社区</td>
                                         <td>2006-12-18</td>
                                         <td>
-                                            <span><button class="btn btn-default btn-xs" data-target="#zzEdit">编辑</button></span>
+                                            <span><button class="btn btn-default btn-xs edit">编辑</button></span>
                                             <span><button class="btn btn-default btn-xs">详情</button></span>
                                             <span><button class="btn btn-default btn-xs">删除</button></span>
                                         </td>
@@ -419,7 +419,7 @@
                                         <td>猛追湾社区</td>
                                         <td>2003-09-12</td>
                                         <td>
-                                            <span><button class="btn btn-default btn-xs" data-target="#zzEdit">编辑</button></span>
+                                            <span><button class="btn btn-default btn-xs edit">编辑</button></span>
                                             <span><button class="btn btn-default btn-xs">详情</button></span>
                                             <span><button class="btn btn-default btn-xs">删除</button></span>
                                         </td>
@@ -431,7 +431,7 @@
                                         <td>沙河社区</td>
                                         <td>2003-09-12</td>
                                         <td>
-                                            <span><button class="btn btn-default btn-xs" data-target="#zzEdit">编辑</button></span>
+                                            <span><button class="btn btn-default btn-xs edit">编辑</button></span>
                                             <span><button class="btn btn-default btn-xs">详情</button></span>
                                             <span><button class="btn btn-default btn-xs">删除</button></span>
                                         </td>
@@ -460,8 +460,6 @@
                     </div>
                 </div>
             </div>
-
-
             <!-- 添加组织机构 -->
             <div class="modal fade bs-example-modal-lg" id="zzModal" tabindex="-1" role="dialog"
                  aria-labelledby="myLargeModalLabel">
@@ -483,7 +481,7 @@
                                 <div class="form-group">
                                     <label for="dzblx" class="col-sm-2 control-label">党支部类型</label>
                                     <div class="col-sm-10">
-                                        <select class="form-control" id="ssgx">
+                                        <select class="form-control" id="dzblx">
                                             <option value="街道社区党支部">街道社区党支部</option>
                                             <option value="企业党支部">企业党支部</option>
                                             <option value="机关党支部">机关党支部</option>
@@ -496,7 +494,7 @@
                                 <div class="form-group">
                                     <label for="ssgx" class="col-sm-2 control-label">所属管辖</label>
                                     <div class="col-sm-10">
-                                        <input type="text" class="form-control" id="dzblx">
+                                        <input type="text" class="form-control" id="ssgx">
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -510,6 +508,60 @@
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                             <button type="button" class="btn btn-primary" data-dismiss="modal" id="saveAddzzjg">添加
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 编辑组织机构 -->
+            <div class="modal fade bs-example-modal-lg" id="zzjgEditModal" tabindex="-1" role="dialog"
+                 aria-labelledby="myLargeModalLabel">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                    aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="">编辑组织机构</h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label for="dzbmc" class="col-sm-2 control-label">党支部名称</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="dzbmc2" placeholder="党支部名称">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="dzblx2" class="col-sm-2 control-label">党支部类型</label>
+                                    <div class="col-sm-10">
+                                        <select class="form-control" id="dzblx2">
+                                            <option value="街道社区党支部">街道社区党支部</option>
+                                            <option value="企业党支部">企业党支部</option>
+                                            <option value="机关党支部">机关党支部</option>
+                                            <option value="学校党支部">学校党支部</option>
+                                            <option value="连队党支部">连队党支部</option>
+                                            <option value="农村党支部">农村党支部</option>
+                                            <option value="其他党支部">其他党支部</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ssgx2" class="col-sm-2 control-label">所属管辖</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="ssgx2">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="jlsj2" class="col-sm-2 control-label">建立时间</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control form_date" id="jlsj2" placeholder="建立时间">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal" id="saveEditzzjg">保存
                             </button>
                         </div>
                     </div>
@@ -646,12 +698,26 @@
 
         $('#zzModal').on('show.bs.modal', function (e) {
             $('#zzModal form')[0].reset();
+        });
+
+        $('#zzjgTable').off('click.edit').on('click.edit','.edit',function () {
+            var dataDom = $(this).parent().parent().parent().find('td');
+            var data = [];
+            dataDom.each(function (index) {
+                data.push($(this).text());
+            });
+            $('#dzbmc2').val(data[1]);
+            $('#dzblx2').val(data[2]);
+            $('#ssgx2').val(data[3]);
+            $('#jlsj2').val(data[4]);
+            console.log($(this).parent().parent().parent());
+            $('#zzjgEditModal').modal('show');
         })
     }
 
     function switchMenu() {
         $('#main-content section').hide();
-        $('#jgsz').show();
+        $('#home').show();
         $('#nav-accordion  li').off('click.a').on('click.a', function () {
             var $this = $(this);
             var type = $this.attr('type');
@@ -718,7 +784,7 @@
                                 '<td>' + tRow.gx + '</td>' +
                                 '<td>' + tRow.sj + '</td>' +
                                 '<td>' +
-                                '<span><button class="btn btn-default btn-xs" data-target="#zzEdit">编辑</button></span>\n' +
+                                '<span><button class="btn btn-default btn-xs edit">编辑</button></span>\n' +
                                 '<span><button class="btn btn-default btn-xs">详情</button></span>\n' +
                                 '<span><button class="btn btn-default btn-xs">删除</button></span>' +
                                 '</td>' +
