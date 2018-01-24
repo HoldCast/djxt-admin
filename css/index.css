@@ -164,19 +164,11 @@ a{
 .ztree ul.level0{
     margin-top: 5px;
 }
-/*.ztree .level2 .node_name,.ztree .level1 .node_name{
-    position: relative;
-    left: -16px;
-    background-color: #eef9f0;
-}*/
+
 .ztree .level2{
-    margin: 5px 0;
+    margin: 2px 0;
 }
-/*.ztree .level2.curSelectedNode,.ztree .level1.curSelectedNode{
-    margin: 5px 0;
-    background-color: #afbab1;
-    border:0;
-}*/
+
 .jgsz .right-content{
     width: calc(100% - 200px);
     /*min-height: 1000px;*/
