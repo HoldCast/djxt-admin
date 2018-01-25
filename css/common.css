@@ -1,4 +1,6 @@
-
+body{
+    background: transparent;
+}
 a{
     text-decoration: none;
 }
@@ -47,14 +49,12 @@ h3,h4,p{
     background-color: #ab3239;
 }
 
-
-
-
 h3.main-title{
     text-align: center;
     padding: 16px;
     background-color: #ddede0;
     font-size: 20px;
+    margin-bottom: 15px;
 }
 .main-content{
     margin-top:15px;

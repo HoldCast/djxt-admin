@@ -1,0 +1,14 @@
+/*数据统计*/
+.sjtj .left-menu .content{
+    height:600px;
+    padding: 15px 0 0 15px;
+    font-size: 14px;
+}
+.sjtj .left-menu .content .title{
+    font-size: 18px;
+}
+.sjtj .right-content .echart{
+    width: 100%;
+    height: 600px;
+    padding: 20px;
+}

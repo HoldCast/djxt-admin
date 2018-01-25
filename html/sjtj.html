@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+    <title>数据统计</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content=""/>
+    <!-- bootstrap-css -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap-datetimepicker.min.css">
+    <!-- Custom CSS -->
+    <link href="../assets/css/style.css" rel='stylesheet' type='text/css'/>
+    <link href="../assets/css/style-responsive.css" rel="stylesheet"/>
+    <!-- font-awesome icons -->
+    <link rel="stylesheet" href="../assets/css/font.css" type="text/css"/>
+    <link href="../assets/css/font-awesome.css" rel="stylesheet">
+    <!-- zTree -->
+    <link rel="stylesheet" href="../assets/ztree/css/zTreeStyle/zTreeStyle.css" type="text/css">
+    <!-- self -->
+    <link rel="stylesheet" href="../css/common.css?v=1.0">
+    <link rel="stylesheet" href="../css/sjtj.css?v=1.0">
+</head>
+<body>
+<div class="sjtj">
+    <h3 class="main-title">组织机构数据统计</h3>
+    <div class="main-content clearfix">
+        <div class="left-menu left">
+            <div class="content">
+                <div class="title">
+                    分类查询条件:
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios0" value="option1" checked="">
+                        按文化程度分类
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                        按类别分类
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                        按行政级别分类
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                        按管辖区域分类
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="right-content left">
+            <div class="echart" id="sjtiEchart"></div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../assets/bootstrap/jquery2.0.3.min.js"></script>
+<script src="../assets/bootstrap/bootstrap.js"></script>
+<script src="../assets/echarts/echarts.min.js"></script>
+<script src="../assets/ztree/js/jquery.ztree.core.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/sjtj.js"></script>
+</html>
