@@ -7,7 +7,7 @@
     padding: 0;
     width: 18px;
     height: 18px;
-    background: url(../images/minimal.png) no-repeat;
+    background: url(../../images/minimal.png) no-repeat;
     border: none;
     cursor: pointer;
 }
@@ -53,7 +53,7 @@
        only screen and (min-device-pixel-ratio: 1.5) {
     .icheckbox_minimal,
     .iradio_minimal {
-        background-image: url(../images/minimal.png);
+        background-image: url(../../images/minimal.png);
         -webkit-background-size: 200px 20px;
         background-size: 200px 20px;
     }

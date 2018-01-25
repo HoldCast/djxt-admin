@@ -1,23 +1,4 @@
 
-.logo{
-    margin: 10px 0 0 10px !important;
-}
-.logo img{
-    width: 40px;
-}
-.logo span{
-    font-size: 25px;
-    color: #e60011 !important;
-    position: relative;
-    top: 5px;
-}
-.search{
-    width: 120px;
-}
-
-.nav .open>a, .nav .open>a:focus, .nav .open>a:hover {
-    background-color: #ab3239;
-}
 
 .dzb-info{
     background-color: #fff;
