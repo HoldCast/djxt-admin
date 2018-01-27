@@ -40,7 +40,7 @@
                     <ul class="dropdown-menu extended logout">
                         <li><a href="#"><i class=" fa fa-suitcase"></i>账号设置</a></li>
                         <li><a href="#"><i class="fa fa-cog"></i>密码修改</a></li>
-                        <li><a href="login.html"><i class="fa fa-key"></i>退出登陆</a></li>
+                        <li><a href="html/login.html"><i class="fa fa-key"></i>退出登陆</a></li>
                     </ul>
                 </li>
             </ul>
@@ -56,12 +56,16 @@
     </aside>
     <section id="main-content">
         <section class="wrapper" id="wrapper">
-            <iframe src="html/home.html" id="frameContent" style="overflow: hidden" frameborder="0" width="100%" height="100%"></iframe>
+            <iframe src="html/home.html" name="frameContent" id="frameContent" style="overflow: hidden" frameborder="0" width="100%" height="100%"></iframe>
         </section>
     </section>
 </section>
+
+<div id="frameModal"></div>
+
 </body>
 <script src="assets/bootstrap/jquery2.0.3.min.js"></script>
+<script src="js/menu-config.js?v=1.0"></script>
 <script src="js/function.js?v=1.0"></script>
 <script src="js/common-parent.js?v=1.0"></script>
 <script src="assets/bootstrap/bootstrap.js"></script>
@@ -75,6 +79,4 @@
 <script src="assets/echarts/echarts.min.js"></script>
 <script src="assets/bootstrap/raphael-min.js"></script>
 <script src="assets/bootstrap/morris.js"></script>
-<!-- self -->
-<script src="js/menu-config.js?v=1.0"></script>
 </html>

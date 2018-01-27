@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<head>
+    <title>预备党员管理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content=""/>
+    <!-- bootstrap-css -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap-datetimepicker.min.css">
+    <!-- Custom CSS -->
+    <link href="../assets/css/style.css" rel='stylesheet' type='text/css'/>
+    <link href="../assets/css/style-responsive.css" rel="stylesheet"/>
+    <!-- font-awesome icons -->
+    <link rel="stylesheet" href="../assets/css/font.css" type="text/css"/>
+    <link href="../assets/css/font-awesome.css" rel="stylesheet">
+    <!-- self -->
+    <link rel="stylesheet" href="../css/common.css?v=1.0">
+</head>
+<body>
+<h3 class="main-title" id="mainTitle"></h3>
+<div>
+    <div class="col-sm-5 m-b-xs">
+        <button id="addZzjg" class="btn btn-sm btn-primary" >
+            添加人员
+        </button>
+    </div>
+    <div class="col-sm-4 text-left">
+
+    </div>
+    <div class="col-sm-3">
+        <div class="input-group">
+            <input type="text" class="input-sm form-control" placeholder="查询">
+            <span class="input-group-btn">
+                                            <button class="btn btn-sm btn-default" type="button">查询</button>
+                                        </span>
+        </div>
+    </div>
+    <table class="table table-striped table-hover table-condensed" ui-jq="footable" ui-options='{
+        "paging": {
+          "enabled": true
+        },
+        "filtering": {
+          "enabled": true
+        },
+        "sorting": {
+          "enabled": true
+        }}'>
+        <thead>
+        <tr>
+            <th>序号</th>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>学历</th>
+            <th>入党申请时间</th>
+            <th>操作</th>
+        </thead>
+        <tbody>
+        <tr data-expanded="true">
+            <td>1</td>
+            <td>王一山</td>
+            <td>男</td>
+            <td>本科</td>
+            <td>2017-12-31</td>
+            <td>
+                <span><button class="btn btn-default btn-sm edit">编辑</button></span>
+                <span><button class="btn btn-default btn-sm">详情</button></span>
+            </td>
+        </tr>
+        <tr data-expanded="true">
+            <td>2</td>
+            <td>赵树</td>
+            <td>男</td>
+            <td>本科</td>
+            <td>2017-12-31</td>
+            <td>
+                <span><button class="btn btn-default btn-sm edit">编辑</button></span>
+                <span><button class="btn btn-default btn-sm">详情</button></span>
+            </td>
+        </tr>
+        <tr data-expanded="true">
+            <td>3</td>
+            <td>陈凤娟</td>
+            <td>女</td>
+            <td>本科</td>
+            <td>2017-12-31</td>
+            <td>
+                <span><button class="btn btn-default btn-sm edit">编辑</button></span>
+                <span><button class="btn btn-default btn-sm">详情</button></span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<footer class="panel-footer">
+    <div class="row">
+        <div class="col-sm-5 text-center">
+            <small class="text-muted inline m-t-sm m-b-sm">
+                显示 1 到 10 条数据，总共 31 条。
+            </small>
+        </div>
+        <div class="col-sm-7 text-right text-center-xs">
+            <ul class="pagination pagination-sm m-t-none m-b-none">
+                <li><a href=""><i class="fa fa-chevron-left"></i></a></li>
+                <li><a href="">1</a></li>
+                <li><a href="">2</a></li>
+                <li><a href="">3</a></li>
+                <li><a href="">4</a></li>
+                <li><a href=""><i class="fa fa-chevron-right"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+</body>
+<script src="../assets/bootstrap/jquery2.0.3.min.js"></script>
+<script src="../js/function.js?v=1.0"></script>
+<script src="../js/common.js?v=1.0"></script>
+</html>

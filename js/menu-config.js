@@ -20,7 +20,7 @@ var homeMenu = [
         children: [
             {name: '入党积极分子',url: 'html/rdjjfz.html'},
             {name: '发展对象信息',url: 'html/fzdxxx.html'},
-            {name: '预备党员管理',url: 'html/ybdygl.html'},
+            {name: '预备党员管理',url: 'html/debug.html'},
             {name: '预备转正党员管理',url: 'html/debug.html'}
         ]
     },

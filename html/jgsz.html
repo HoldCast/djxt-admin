@@ -35,92 +35,28 @@
                     双桥子街道党工委
                 </div>
                 <div class="row w3-res-tb">
-                    <div class="col-sm-5 m-b-xs">
-                        <button id="addZzjg" class="btn btn-sm btn-primary" >
-                            添加组织
+                    <div class="col-sm-12 m-b-xs">
+                        <button id="addZzjg" class="btn btn-sm btn-primary">
+                            添加子组织机构
                         </button>
-                        <!--<button class="btn btn-sm btn-primary">编辑本组织</button>-->
-                        <select class="input-sm form-control w-sm inline v-middle">
-                            <option value="0">街道社区党支部</option>
-                            <option value="1">企业党支部</option>
-                            <option value="2">机关党支部</option>
-                            <option value="2">学校党支部</option>
-                            <option value="2">连队党支部</option>
-                            <option value="2">农村党支部</option>
-                        </select>
-                        <button class="btn btn-sm btn-default">筛选</button>
-                    </div>
-                    <div class="col-sm-4 text-left">
-
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="input-group">
-                            <input type="text" class="input-sm form-control" placeholder="查询">
-                            <span class="input-group-btn">
-                                            <button class="btn btn-sm btn-default" type="button">查询</button>
-                                        </span>
-                        </div>
+                        <button id="editZzjg" class="btn btn-sm btn-primary" >
+                            修改本组织机构
+                        </button>
                     </div>
                 </div>
                 <div>
-                    <table class="table" ui-jq="footable" ui-options='{
-                                        "paging": {
-                                          "enabled": true
-                                        },
-                                        "filtering": {
-                                          "enabled": true
-                                        },
-                                        "sorting": {
-                                          "enabled": true
-                                        }}'>
+                    <table class="table">
                         <thead>
-                        <tr>
-                            <th data-breakpoints="xs">序号</th>
-                            <th>党支部名称</th>
-                            <th>党支部类型</th>
-                            <th>所属管辖</th>
-                            <th data-breakpoints="xs sm md" data-title="DOB">建立时间</th>
-                            <th>操作</th>
-                        </tr>
+                            <tr>
+                                <th data-breakpoints="xs">序号</th>
+                                <th>党支部名称</th>
+                                <th>党支部类型</th>
+                                <th>所属管辖</th>
+                                <th data-breakpoints="xs sm md" data-title="DOB">建立时间</th>
+                                <th>操作</th>
+                            </tr>
                         </thead>
-                        <tbody id="zzjgTable">
-                        <tr data-expanded="true">
-                            <td>1</td>
-                            <td>新鸿社区党委</td>
-                            <td>街道社区党支部</td>
-                            <td>新鸿社区</td>
-                            <td>2006-12-18</td>
-                            <td>
-                                <span><button class="btn btn-default btn-xs edit">编辑</button></span>
-                                <span><button class="btn btn-default btn-xs">详情</button></span>
-                                <span><button class="btn btn-default btn-xs">删除</button></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>猛追湾社区党委</td>
-                            <td>街道社区党支部</td>
-                            <td>猛追湾社区</td>
-                            <td>2003-09-12</td>
-                            <td>
-                                <span><button class="btn btn-default btn-xs edit">编辑</button></span>
-                                <span><button class="btn btn-default btn-xs">详情</button></span>
-                                <span><button class="btn btn-default btn-xs">删除</button></span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>沙河社区党委</td>
-                            <td>街道社区党支部</td>
-                            <td>沙河社区</td>
-                            <td>2003-09-12</td>
-                            <td>
-                                <span><button class="btn btn-default btn-xs edit">编辑</button></span>
-                                <span><button class="btn btn-default btn-xs">详情</button></span>
-                                <span><button class="btn btn-default btn-xs">删除</button></span>
-                            </td>
-                        </tr>
-                        </tbody>
+                        <tbody id="zzjgTable"></tbody>
                     </table>
                 </div>
             </div>
@@ -144,28 +80,28 @@
         </div>
     </div>
 </div>
-<!-- 添加组织机构 -->
-<div class="modal fade bs-example-modal-lg" id="zzModal" tabindex="-1" role="dialog"
+<!-- 添加,编辑组织机构 -->
+<div class="modal fade bs-example-modal-lg" id="zzjgModal" tabindex="-1" role="dialog"
      aria-labelledby="myLargeModalLabel">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel2">添加组织机构</h4>
+                <h4 class="modal-title" id="modalTitle">添加组织机构</h4>
             </div>
             <div class="modal-body">
                 <form class="form-horizontal">
                     <div class="form-group">
                         <label for="dzbmc" class="col-sm-2 control-label">党支部名称</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="dzbmc" placeholder="党支部名称">
+                            <input type="text" class="form-control val" name="dzbmc" placeholder="党支部名称">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="dzblx" class="col-sm-2 control-label">党支部类型</label>
                         <div class="col-sm-10">
-                            <select class="form-control" id="dzblx">
+                            <select class="form-control val" name="dzblx">
                                 <option value="街道社区党支部">街道社区党支部</option>
                                 <option value="企业党支部">企业党支部</option>
                                 <option value="机关党支部">机关党支部</option>
@@ -178,74 +114,20 @@
                     <div class="form-group">
                         <label for="ssgx" class="col-sm-2 control-label">所属管辖</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="ssgx">
+                            <input type="text" class="form-control val" name="ssgx">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="jlsj" class="col-sm-2 control-label">建立时间</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control form_date" id="jlsj" placeholder="建立时间">
+                            <input type="text" class="form-control form_date val" name="jlsj" placeholder="建立时间">
                         </div>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal" id="saveAddzzjg">添加
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- 编辑组织机构 -->
-<div class="modal fade bs-example-modal-lg" id="zzjgEditModal" tabindex="-1" role="dialog"
-     aria-labelledby="myLargeModalLabel">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
-                        aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="">编辑组织机构</h4>
-            </div>
-            <div class="modal-body">
-                <form class="form-horizontal">
-                    <div class="form-group">
-                        <label for="dzbmc" class="col-sm-2 control-label">党支部名称</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="dzbmc2" placeholder="党支部名称">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="dzblx2" class="col-sm-2 control-label">党支部类型</label>
-                        <div class="col-sm-10">
-                            <select class="form-control" id="dzblx2">
-                                <option value="街道社区党支部">街道社区党支部</option>
-                                <option value="企业党支部">企业党支部</option>
-                                <option value="机关党支部">机关党支部</option>
-                                <option value="学校党支部">学校党支部</option>
-                                <option value="连队党支部">连队党支部</option>
-                                <option value="农村党支部">农村党支部</option>
-                                <option value="其他党支部">其他党支部</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="ssgx2" class="col-sm-2 control-label">所属管辖</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="ssgx2">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="jlsj2" class="col-sm-2 control-label">建立时间</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control form_date" id="jlsj2" placeholder="建立时间">
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-primary" data-dismiss="modal" id="saveEditzzjg">保存
+                <button type="button" class="btn btn-primary" id="saveAddzzjg">添加
                 </button>
             </div>
         </div>
@@ -254,75 +136,10 @@
 </body>
 <script src="../assets/bootstrap/jquery2.0.3.min.js"></script>
 <script src="../assets/bootstrap/bootstrap.js"></script>
+<script src="../assets/bootstrap/bootstrap-datetimepicker.js"></script>
+<script src="../assets/bootstrap/locales/bootstrap-datetimepicker.zh-CN.js"></script>
 <script src="../assets/ztree/js/jquery.ztree.core.js"></script>
 <script src="../js/function.js?v=1.0"></script>
 <script src="../js/common.js?v=1.0"></script>
-<script>
-    zzjgTree();
-
-    $('#addZzjg').on('click',function () {
-        $('#zzModal').modal('show');
-    })
-
-    function zzjgTree() {
-        var zNodes = [
-            {id: 1, pId: 0, name: "双桥子街道党工委", open: true},
-            {id: 11, pId: 1, name: "新鸿社区党委", lx: '街道社区党支部', gx: '新鸿社区', sj: '2003-11-08', open: true},
-            {id: 111, pId: 11, name: "居委会党支部", lx: '其他党支部', gx: '新鸿社区', sj: '2003-11-08', iconClose: true},
-            {id: 112, pId: 11, name: "电视台党支部", lx: '其他党支部', gx: '新鸿社区', sj: '2003-11-08'},
-            {id: 113, pId: 11, name: "印刷公司党支部", lx: '企业党支部', gx: '新鸿社区', sj: '2003-11-08'},
-            {id: 12, pId: 1, name: "猛追湾社区党委", lx: '社区党支部', gx: '猛追湾社区', sj: '2001-11-08', open: true},
-            {id: 121, pId: 12, name: "居委会党支部", x: '其他党支部', gx: '猛追湾社区', sj: '2001-11-08'},
-            {id: 122, pId: 12, name: "国电党支部", x: '企业党支部', gx: '猛追湾社区', sj: '2001-11-08',},
-            {id: 13, pId: 1, name: "沙河社区党委", lx: '社区党支部', gx: '沙河社区', sj: '2005-11-08', isParent: true}
-        ];
-        var setting = {
-            view: {
-                showIcon: showIconForTree
-            },
-            data: {
-                simpleData: {
-                    enable: true,
-                    txtSelectedEnable: false
-                }
-            },
-            callback: {
-                onClick: function (event, treeId, treeNode) {
-                    var name = treeNode.name;
-                    if (treeNode.pId <= 1) {
-                        $('#zzjgTableName').text(name);
-                        var tableData = treeNode.children;
-                        $('#zzjgTable').empty();
-                        for (var i = 0; i < tableData.length; i++) {
-                            var tRow = tableData[i];
-                            var html = '<tr data-expanded="true">' +
-                                '<td>' + (i + 1) + '</td>' +
-                                '<td>' + tRow.name + '</td>' +
-                                '<td>' + tRow.lx + '</td>' +
-                                '<td>' + tRow.gx + '</td>' +
-                                '<td>' + tRow.sj + '</td>' +
-                                '<td>' +
-                                '<span><button class="btn btn-default btn-xs edit">编辑</button></span>\n' +
-                                '<span><button class="btn btn-default btn-xs">详情</button></span>\n' +
-                                '<span><button class="btn btn-default btn-xs">删除</button></span>' +
-                                '</td>' +
-                                '</tr>';
-                            $('#zzjgTable').append(html);
-                        }
-                    }
-
-
-                    console.log(treeNode)
-                    //$('#dyxxModal').modal('show')
-                }
-            }
-        };
-
-        function showIconForTree(treeId, treeNode) {
-            //return !treeNode.isParent;
-        };
-        //初始化
-        $.fn.zTree.init($("#zzjgTree"), setting, zNodes);
-    }
-</script>
+<script src="../js/jgsz.js?v=1.0"></script>
 </html>
