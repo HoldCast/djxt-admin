@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <head>
-    <title>机构设置</title>
+    <title>党建管理中心</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content=""/>
+    <link rel="icon" href="../images/favicon2.ico">
     <!-- bootstrap-css -->
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/bootstrap-datetimepicker.min.css">
@@ -19,67 +20,86 @@
     <link rel="stylesheet" href="../css/common.css?v=1.0">
     <link rel="stylesheet" href="../css/jgsz.css?v=1.0">
 </head>
-<body>
-<div class="jgsz clearfix">
-    <div class="left-tree pull-left">
-        <!-- Button trigger modal -->
-        <div class="title">
-            组织机构
+<body style="background:#f9f9f9;">
+<section id="container">
+    <!--顶部-->
+    <header class="header fixed-top clearfix" id="commonHeader"></header>
+    <!--左边菜单-->
+    <aside>
+        <div id="sidebar" class="nav-collapse">
+            <div class="leftside-navigation">
+                <ul class="sidebar-menu" id="nav-accordion"></ul>
+            </div>
         </div>
-        <ul id="zzjgTree" class="ztree"></ul>
-    </div>
-    <div class="right-content pull-left">
-        <div class="table-agile-info">
-            <div class="panel panel-default">
-                <div class="panel-heading" id="zzjgTableName">
-                    双桥子街道党工委
+    </aside>
+    <!--右边内容-->
+    <section id="main-content">
+        <section class="wrapper" id="wrapper">
+            <div class="jgsz clearfix">
+                <div class="left-tree pull-left">
+                    <!-- Button trigger modal -->
+                    <div class="title">
+                        组织机构
+                    </div>
+                    <ul id="zzjgTree" class="ztree"></ul>
                 </div>
-                <div class="row w3-res-tb">
-                    <div class="col-sm-12 m-b-xs">
-                        <button id="addZzjg" class="btn btn-sm btn-primary">
-                            添加子组织机构
-                        </button>
-                        <button id="editZzjg" class="btn btn-sm btn-primary" >
-                            修改本组织机构
-                        </button>
+                <div class="right-content pull-left">
+                    <div class="table-agile-info">
+                        <div class="panel panel-default">
+                            <div class="panel-heading" id="zzjgTableName">
+                                双桥子街道党工委
+                            </div>
+                            <div class="row w3-res-tb">
+                                <div class="col-sm-12 m-b-xs">
+                                    <button id="addZzjg" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#zzjgModal">
+                                        添加子组织机构
+                                    </button>
+                                    <button id="editZzjg" class="btn btn-sm btn-primary" >
+                                        修改本组织机构
+                                    </button>
+                                </div>
+                            </div>
+                            <div>
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th data-breakpoints="xs">序号</th>
+                                        <th>党支部名称</th>
+                                        <th>党支部类型</th>
+                                        <th>所属管辖</th>
+                                        <th data-breakpoints="xs sm md" data-title="DOB">建立时间</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="zzjgTable"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-5 text-center">
+                                <small class="text-muted inline m-t-sm m-b-sm"></small>
+                            </div>
+                            <div class="col-sm-7 text-right text-center-xs">
+                                <ul class="pagination pagination-sm m-t-none m-b-none">
+                                    <li><a href=""><i class="fa fa-chevron-left"></i></a></li>
+                                    <li><a href="">1</a></li>
+                                    <li><a href="">2</a></li>
+                                    <li><a href="">3</a></li>
+                                    <li><a href="">4</a></li>
+                                    <li><a href="">5</a></li>
+                                    <li><a href="">6</a></li>
+                                    <li><a href=""><i class="fa fa-chevron-right"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th data-breakpoints="xs">序号</th>
-                                <th>党支部名称</th>
-                                <th>党支部类型</th>
-                                <th>所属管辖</th>
-                                <th data-breakpoints="xs sm md" data-title="DOB">建立时间</th>
-                                <th>操作</th>
-                            </tr>
-                        </thead>
-                        <tbody id="zzjgTable"></tbody>
-                    </table>
-                </div>
             </div>
-            <div class="row">
-                <div class="col-sm-5 text-center">
-                    <small class="text-muted inline m-t-sm m-b-sm"></small>
-                </div>
-                <div class="col-sm-7 text-right text-center-xs">
-                    <ul class="pagination pagination-sm m-t-none m-b-none">
-                        <li><a href=""><i class="fa fa-chevron-left"></i></a></li>
-                        <li><a href="">1</a></li>
-                        <li><a href="">2</a></li>
-                        <li><a href="">3</a></li>
-                        <li><a href="">4</a></li>
-                        <li><a href="">5</a></li>
-                        <li><a href="">6</a></li>
-                        <li><a href=""><i class="fa fa-chevron-right"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+        </section>
+    </section>
+</section>
+
+
 <!-- 添加,编辑组织机构 -->
 <div class="modal fade bs-example-modal-lg" id="zzjgModal" tabindex="-1" role="dialog"
      aria-labelledby="myLargeModalLabel">
@@ -135,11 +155,20 @@
 </div>
 </body>
 <script src="../assets/bootstrap/jquery2.0.3.min.js"></script>
+<script src="../js/menu-config.js?v=1.0"></script>
+<script src="../js/function.js?v=1.0"></script>
+<script src="../js/common2.js?v=1.0"></script>
 <script src="../assets/bootstrap/bootstrap.js"></script>
 <script src="../assets/bootstrap/bootstrap-datetimepicker.js"></script>
 <script src="../assets/bootstrap/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<script src="../assets/bootstrap/jquery.dcjqaccordion.2.7.js"></script>
+<script src="../assets/bootstrap/jquery.scrollTo.js"></script>
+<script src="../assets/bootstrap/scripts.js"></script>
+<script src="../assets/bootstrap/jquery.slimscroll.js"></script>
+<script src="../assets/bootstrap/jquery.nicescroll.js"></script>
+<script src="../assets/echarts/echarts.min.js"></script>
+<script src="../assets/bootstrap/raphael-min.js"></script>
+<script src="../assets/bootstrap/morris.js"></script>
 <script src="../assets/ztree/js/jquery.ztree.core.js"></script>
-<script src="../js/function.js?v=1.0"></script>
-<script src="../js/common.js?v=1.0"></script>
-<script src="../js/jgsz.js?v=1.0"></script>
+<script src="../js/jgsz.js"></script>
 </html>

@@ -1,29 +1,9 @@
 $(function () {
     zzjgTree();
-    zzjgModal();
-    datepicker;
-});
-
-function datepicker() {
     $('.form_date').datetimepicker({
         format: 'yyyy-mm-dd hh:ii'
     });
-}
-
-function zzjgModal() {
-    $('#addZzjg').on('click',function () {
-        //window.updateData = function (data) {};
-        var objData = {
-            modalId: 'zzjgModal',   //模态框ID
-            saveBtn:'saveAddzzjg'   //确定(保存)按钮ID
-        };
-        parent.openModal($('#' + objData.modalId),objData,function (data) {
-            console.log(data);
-
-        });
-    });
-}
-
+});
 
 function zzjgTree() {
     var zNodes = [

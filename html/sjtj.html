@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <head>
-    <title>数据统计</title>
+    <title>党建管理中心</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content=""/>
+    <link rel="icon" href="../images/favicon2.ico">
     <!-- bootstrap-css -->
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/bootstrap-datetimepicker.min.css">
@@ -13,58 +14,82 @@
     <!-- font-awesome icons -->
     <link rel="stylesheet" href="../assets/css/font.css" type="text/css"/>
     <link href="../assets/css/font-awesome.css" rel="stylesheet">
-    <!-- zTree -->
-    <link rel="stylesheet" href="../assets/ztree/css/zTreeStyle/zTreeStyle.css" type="text/css">
     <!-- self -->
     <link rel="stylesheet" href="../css/common.css?v=1.0">
     <link rel="stylesheet" href="../css/sjtj.css?v=1.0">
 </head>
-<body>
-<div class="sjtj">
-    <h3 class="main-title" id="mainTitle"></h3>
-    <div class="main-content clearfix">
-        <div class="left-menu left">
-            <div class="content">
-                <div class="title">
-                    分类查询条件:
-                </div>
-                <div class="radio">
-                    <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios0" value="option1" checked="">
-                        按文化程度分类
-                    </label>
-                </div>
-                <div class="radio">
-                    <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-                        按类别分类
-                    </label>
-                </div>
-                <div class="radio">
-                    <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                        按行政级别分类
-                    </label>
-                </div>
-                <div class="radio">
-                    <label>
-                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                        按管辖区域分类
-                    </label>
+<body style="background:#f9f9f9;">
+    <section id="container">
+        <!--顶部-->
+        <header class="header fixed-top clearfix" id="commonHeader"></header>
+        <!--左边菜单-->
+        <aside>
+            <div id="sidebar" class="nav-collapse">
+                <div class="leftside-navigation">
+                    <ul class="sidebar-menu" id="nav-accordion"></ul>
                 </div>
             </div>
-        </div>
-        <div class="right-content left">
-            <div class="echart" id="sjtiEchart"></div>
-        </div>
-    </div>
-</div>
+        </aside>
+        <!--右边内容-->
+        <section id="main-content">
+            <section class="wrapper" id="wrapper">
+                <div class="sjtj">
+                    <h3 class="main-title" id="mainTitle"></h3>
+                    <div class="main-content clearfix">
+                        <div class="left-menu left">
+                            <div class="content">
+                                <div class="title">
+                                    分类查询条件:
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios0" value="option1" checked="">
+                                        按文化程度分类
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
+                                        按类别分类
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                        按行政级别分类
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                        按管辖区域分类
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-content left">
+                            <div class="echart" id="sjtiEchart"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </section>
 </body>
 <script src="../assets/bootstrap/jquery2.0.3.min.js"></script>
-<script src="../assets/bootstrap/bootstrap.js"></script>
-<script src="../assets/echarts/echarts.min.js"></script>
-<script src="../assets/ztree/js/jquery.ztree.core.js"></script>
+<script src="../js/menu-config.js?v=1.0"></script>
 <script src="../js/function.js?v=1.0"></script>
-<script src="../js/common.js?v=1.0"></script>
+<script src="../js/common2.js?v=1.0"></script>
+<script src="../assets/bootstrap/bootstrap.js"></script>
+<script src="../assets/bootstrap/bootstrap-datetimepicker.js"></script>
+<script src="../assets/bootstrap/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<script src="../assets/bootstrap/jquery.dcjqaccordion.2.7.js"></script>
+<script src="../assets/bootstrap/jquery.scrollTo.js"></script>
+<script src="../assets/bootstrap/scripts.js"></script>
+<script src="../assets/bootstrap/jquery.slimscroll.js"></script>
+<script src="../assets/bootstrap/jquery.nicescroll.js"></script>
+<script src="../assets/echarts/echarts.min.js"></script>
+<script src="../assets/bootstrap/raphael-min.js"></script>
+<script src="../assets/bootstrap/morris.js"></script>
 <script src="../js/sjtj.js?v=1.0"></script>
 </html>

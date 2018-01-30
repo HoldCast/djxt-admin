@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <head>
-    <title>入党积极分子</title>
+    <title>党建管理中心</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="keywords" content=""/>
+    <link rel="icon" href="../images/favicon2.ico">
     <!-- bootstrap-css -->
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/bootstrap-datetimepicker.min.css">
@@ -15,27 +16,36 @@
     <link href="../assets/css/font-awesome.css" rel="stylesheet">
     <!-- self -->
     <link rel="stylesheet" href="../css/common.css?v=1.0">
+    <link rel="stylesheet" href="../css/sjtj.css?v=1.0">
 </head>
-<body>
-<h3 class="main-title" id="mainTitle"></h3>
-<div>
-    <div class="col-sm-5 m-b-xs">
-        <button id="addZzjg" class="btn btn-sm btn-primary" >
-            添加人员
-        </button>
-    </div>
-    <div class="col-sm-4 text-left">
-
-    </div>
-    <div class="col-sm-3">
-        <div class="input-group">
-            <input type="text" class="input-sm form-control" placeholder="查询">
-            <span class="input-group-btn">
-                                            <button class="btn btn-sm btn-default" type="button">查询</button>
-                                        </span>
+<body style="background:#f9f9f9;">
+<section id="container">
+    <!--顶部-->
+    <header class="header fixed-top clearfix" id="commonHeader"></header>
+    <!--左边菜单-->
+    <aside>
+        <div id="sidebar" class="nav-collapse">
+            <div class="leftside-navigation">
+                <ul class="sidebar-menu" id="nav-accordion"></ul>
+            </div>
         </div>
-    </div>
-    <table class="table table-striped table-hover table-condensed" ui-jq="footable" ui-options='{
+    </aside>
+    <!--右边内容-->
+    <section id="main-content">
+        <section class="wrapper" id="wrapper">
+            <h3 class="main-title" id="mainTitle"></h3>
+            <div>
+                <div class="col-sm-5 m-b-xs">
+                    <button id="addRdjjfz" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#rdjjfzModal">
+                        添加入党积极分子
+                    </button>
+                </div>
+                <div class="col-sm-4 text-left">
+
+                </div>
+                <div class="col-sm-3">
+                </div>
+                <table class="table table-striped table-hover table-condensed" ui-jq="footable" ui-options='{
         "paging": {
           "enabled": true
         },
@@ -45,73 +55,190 @@
         "sorting": {
           "enabled": true
         }}'>
-        <thead>
-        <tr>
-            <th>序号</th>
-            <th>姓名</th>
-            <th>性别</th>
-            <th>学历</th>
-            <th>入党申请时间</th>
-            <th>操作</th>
-        </thead>
-        <tbody>
-        <tr data-expanded="true">
-            <td>1</td>
-            <td>王一山</td>
-            <td>男</td>
-            <td>本科</td>
-            <td>2017-12-31</td>
-            <td>
-                <span><button class="btn btn-default btn-sm edit">编辑</button></span>
-                <span><button class="btn btn-default btn-sm">详情</button></span>
-            </td>
-        </tr>
-        <tr data-expanded="true">
-            <td>2</td>
-            <td>赵树</td>
-            <td>男</td>
-            <td>本科</td>
-            <td>2017-12-31</td>
-            <td>
-                <span><button class="btn btn-default btn-sm edit">编辑</button></span>
-                <span><button class="btn btn-default btn-sm">详情</button></span>
-            </td>
-        </tr>
-        <tr data-expanded="true">
-            <td>3</td>
-            <td>陈凤娟</td>
-            <td>女</td>
-            <td>本科</td>
-            <td>2017-12-31</td>
-            <td>
-                <span><button class="btn btn-default btn-sm edit">编辑</button></span>
-                <span><button class="btn btn-default btn-sm">详情</button></span>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-</div>
-<footer class="panel-footer">
-    <div class="row">
-        <div class="col-sm-5 text-center">
-            <small class="text-muted inline m-t-sm m-b-sm">
-                显示 1 到 10 条数据，总共 31 条。
-            </small>
-        </div>
-        <div class="col-sm-7 text-right text-center-xs">
-            <ul class="pagination pagination-sm m-t-none m-b-none">
-                <li><a href=""><i class="fa fa-chevron-left"></i></a></li>
-                <li><a href="">1</a></li>
-                <li><a href="">2</a></li>
-                <li><a href="">3</a></li>
-                <li><a href="">4</a></li>
-                <li><a href=""><i class="fa fa-chevron-right"></i></a></li>
-            </ul>
+                    <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>姓名</th>
+                        <th>性别</th>
+                        <th>学历</th>
+                        <th>入党申请时间</th>
+                        <th>操作</th>
+                    </thead>
+                    <tbody>
+                    <tr data-expanded="true">
+                        <td>1</td>
+                        <td>王一山</td>
+                        <td>男</td>
+                        <td>本科</td>
+                        <td>2017-12-31</td>
+                        <td>
+                            <span><button class="btn btn-default btn-sm edit">编辑</button></span>
+                            <span><button class="btn btn-default btn-sm">详情</button></span>
+                        </td>
+                    </tr>
+                    <tr data-expanded="true">
+                        <td>2</td>
+                        <td>赵树</td>
+                        <td>男</td>
+                        <td>本科</td>
+                        <td>2017-12-31</td>
+                        <td>
+                            <span><button class="btn btn-default btn-sm edit">编辑</button></span>
+                            <span><button class="btn btn-default btn-sm">详情</button></span>
+                        </td>
+                    </tr>
+                    <tr data-expanded="true">
+                        <td>3</td>
+                        <td>陈凤娟</td>
+                        <td>女</td>
+                        <td>本科</td>
+                        <td>2017-12-31</td>
+                        <td>
+                            <span><button class="btn btn-default btn-sm edit">编辑</button></span>
+                            <span><button class="btn btn-default btn-sm">详情</button></span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <footer class="panel-footer">
+                <div class="row">
+                    <div class="col-sm-5 text-center">
+                        <small class="text-muted inline m-t-sm m-b-sm">
+                            显示 1 到 10 条数据，总共 31 条。
+                        </small>
+                    </div>
+                    <div class="col-sm-7 text-right text-center-xs">
+                        <ul class="pagination pagination-sm m-t-none m-b-none">
+                            <li><a href=""><i class="fa fa-chevron-left"></i></a></li>
+                            <li><a href="">1</a></li>
+                            <li><a href="">2</a></li>
+                            <li><a href="">3</a></li>
+                            <li><a href="">4</a></li>
+                            <li><a href=""><i class="fa fa-chevron-right"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
+            </section>
+    </section>
+</section>
+
+<!-- 入党积极分子模态框 -->
+<div class="modal fade bs-example-modal-lg" id="rdjjfzModal" tabindex="-1" role="dialog"
+     aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalTitle">入党积极分子信息</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="modal-sub-title">个人基本信息</div>
+                    <div class="form-group clearfix modal-form type1">
+                        <div class="form-item1 pull-left person-img" style="height:200px;">
+                            <img src="../images/person1.png" alt="">
+                            <div class="text-center">
+                                <button type="button" class="btn btn-default btn-xs">编辑照片</button>
+                            </div>
+
+                        </div>
+                        <div class="form-item1 pull-left">
+                            <span class="pre">姓名</span><input type="text">
+                        </div>
+                        <div class="form-item1 pull-left">
+                            <span class="pre">性别</span><input type="text">
+                        </div>
+                        <div class="form-item1 pull-left">
+                            <span class="pre">民族</span><input type="text">
+                        </div>
+                        <div class="form-item1 pull-left">
+                            <span class="pre">学历</span><input type="text">
+                        </div>
+                        <div class="form-item1 pull-left">
+                            <span class="pre">出生日期</span><input type="text">
+                        </div>
+                        <div class="form-item1 pull-left">
+                            <span class="pre">身份证号</span><input type="text">
+                        </div>
+                        <div class="form-item1 pull-left">
+                            <span class="pre">联系电话</span><input type="text">
+                        </div>
+                        <div class="form-item1 pull-left">
+                            <span class="pre">工作日期</span><input type="text">
+                        </div>
+                        <div class="form-item1 pull-left">
+                            <span class="pre">申请日期</span><input type="text">
+                        </div>
+                        <div class="form-item1 pull-left">
+                            <span class="pre">职业</span><input type="text">
+                        </div>
+                        <div class="form-item1 pull-left">
+                            <span class="pre">家庭住址</span><input type="text" class="long">
+                        </div>
+                        <div class="form-item1 pull-left">
+                            <span class="pre">工作单位</span><input type="text" class="long">
+                        </div>
+                    </div>
+                    <div class="modal-sub-title">积极分子推荐信息</div>
+                    <div class="form-group clearfix modal-form type2">
+                        <div class="form-item1 pull-left">
+                            <span class="pre">党组织共有党员</span><input type="text"><span class="unit">人</span>
+                        </div>
+                        <div class="form-item1 pull-left">
+                            <span class="pre">有表决权的党员</span><input type="text"><span class="unit">人</span>
+                        </div>
+                        <div class="form-item1 pull-left">
+                            <span class="pre">本次到会党员</span><input type="text"><span class="unit">人</span>
+                        </div>
+                        <div class="form-item1 pull-left">
+                            <span class="pre">本次表决权党员</span><input type="text"><span class="unit">人</span>
+                        </div>
+                        <div class="form-item1 pull-left">
+                            <span class="pre">群众代表</span><input type="text"><span class="unit">人</span>
+                        </div>
+                        <div class="form-item1 pull-left">
+                            <span class="pre">同意票数</span><input type="text"><span class="unit">人</span>
+                        </div>
+                        <div class="form-item1 pull-left">
+                            <span class="pre">不同意票数</span><input type="text"><span class="unit">人</span>
+                        </div>
+                        <div class="form-item1 pull-left">
+                            <span class="pre">弃权票数</span><input type="text"><span class="unit">人</span>
+                        </div>
+                        <div class="form-item1 pull-left">
+                            <span class="pre">推荐日期</span><input style="width:200px;" type="text"><span class="unit"></span>
+                        </div>
+                        <div class="form-item1 pull-left">
+                            <span class="pre">表决结果</span><input style="width:200px;" type="text"><span class="unit"></span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" id="saveAddzzjg">添加
+                </button>
+            </div>
         </div>
     </div>
-</footer>
+</div>
+
 </body>
 <script src="../assets/bootstrap/jquery2.0.3.min.js"></script>
+<script src="../js/menu-config.js?v=1.0"></script>
 <script src="../js/function.js?v=1.0"></script>
-<script src="../js/common.js?v=1.0"></script>
+<script src="../js/common2.js?v=1.0"></script>
+<script src="../assets/bootstrap/bootstrap.js"></script>
+<script src="../assets/bootstrap/bootstrap-datetimepicker.js"></script>
+<script src="../assets/bootstrap/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<script src="../assets/bootstrap/jquery.dcjqaccordion.2.7.js"></script>
+<script src="../assets/bootstrap/jquery.scrollTo.js"></script>
+<script src="../assets/bootstrap/scripts.js"></script>
+<script src="../assets/bootstrap/jquery.slimscroll.js"></script>
+<script src="../assets/bootstrap/jquery.nicescroll.js"></script>
+<script src="../assets/bootstrap/raphael-min.js"></script>
+<script src="../assets/bootstrap/morris.js"></script>
 </html>

@@ -78,3 +78,54 @@ h3.main-title{
     background: #fff;
     border-radius:0;
 }
+.form-group {
+    margin-bottom: 10px !important;
+}
+.modal-sub-title{
+    border-bottom: 1px #ccc dotted;
+    margin-bottom: 10px;
+}
+
+.modal-form{
+    padding: 0 15px;
+}
+
+.modal-form .form-item1{
+    margin-bottom: 5px;
+}
+
+.modal-form .form-item1 .pre{
+    display: inline-block;
+    min-width: 80px;
+    text-align: right;
+    margin-right: 10px;
+}
+.modal-form .form-item1 .unit{
+    margin-left: 2px;
+}
+.modal-form.type2 .form-item1 .pre{
+    min-width: 120px;
+}
+
+.modal-form .form-item1 input.long{
+    width: 660px;
+}
+
+.modal-form .form-item1 input{
+    border-radius: 3px;
+    /*outline: none;*/
+    border: 1px solid #ccc;
+    width: 160px;
+    font-size: 14px;
+    padding: 3px;
+}
+
+.modal-form.type2 .form-item1 input{
+    width:65px;
+}
+
+.modal-form .form-item1.person-img img{
+    width: 116px;
+    height: 150px;
+    margin-bottom: 5px;
+}
