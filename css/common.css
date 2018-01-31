@@ -84,6 +84,7 @@ h3.main-title{
 .modal-sub-title{
     border-bottom: 1px #ccc dotted;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 .modal-form{
