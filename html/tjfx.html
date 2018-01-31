@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<head>
+    <title>党建管理中心</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content=""/>
+    <link rel="icon" href="../images/favicon2.ico">
+    <!-- bootstrap-css -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap-datetimepicker.min.css">
+    <!-- Custom CSS -->
+    <link href="../assets/css/style.css" rel='stylesheet' type='text/css'/>
+    <link href="../assets/css/style-responsive.css" rel="stylesheet"/>
+    <!-- font-awesome icons -->
+    <link rel="stylesheet" href="../assets/css/font.css" type="text/css"/>
+    <link href="../assets/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/morris.css" type="text/css"/>
+    <link rel="stylesheet" href="../assets/css/monthly.css">
+    <!-- self -->
+    <link rel="stylesheet" href="../css/common.css?v=1.0">
+    <link rel="stylesheet" href="../css/sjtj.css?v=1.0">
+    <script src="../assets/bootstrap/jquery2.0.3.min.js"></script>
+    <script src="../js/menu-config.js?v=1.0"></script>
+    <script src="../js/function.js?v=1.0"></script>
+    <script src="../js/common2.js?v=1.0"></script>
+    <script src="../assets/bootstrap/bootstrap.js"></script>
+    <script src="../assets/bootstrap/bootstrap-datetimepicker.js"></script>
+    <script src="../assets/bootstrap/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+    <script src="../assets/bootstrap/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="../assets/bootstrap/jquery.scrollTo.js"></script>
+    <script src="../assets/bootstrap/scripts.js"></script>
+    <script src="../assets/bootstrap/jquery.slimscroll.js"></script>
+    <script src="../assets/bootstrap/jquery.nicescroll.js"></script>
+    <script src="../assets/echarts/echarts.min.js"></script>
+    <script src="../assets/bootstrap/raphael-min.js"></script>
+    <script src="../assets/bootstrap/morris.js"></script>
+</head>
+<body style="background:#f9f9f9;">
+    <section id="container">
+        <!--顶部-->
+        <header class="header fixed-top clearfix" id="commonHeader"></header>
+        <!--左边菜单-->
+        <aside>
+            <div id="sidebar" class="nav-collapse">
+                <div class="leftside-navigation">
+                    <ul class="sidebar-menu" id="nav-accordion"></ul>
+                </div>
+            </div>
+        </aside>
+        <!--右边内容-->
+        <section id="main-content">
+            <section class="wrapper" id="wrapper">
+                <h3 class="main-title" id="mainTitle">智慧党建大数据平台</h3>
+                <!-- //market-->
+                <div class="market-updates">
+                    <!--<div class="col-md-3 market-update-gd">
+                        <div class="market-update-block clr-block-1">
+                            <div class="col-md-4 market-update-right">
+                                <i class="fa fa-users" ></i>
+                            </div>
+                            <div class="col-md-8 market-update-left">
+                                <h4>辖区总人数</h4>
+                                <h3>11,250</h3>
+                                <p>本辖区内所有常住人口数量</p>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>-->
+                    <div class="col-md-4 market-update-gd">
+                        <div class="market-update-block clr-block-4">
+                            <div class="col-md-4 market-update-right">
+                                <i class="fa fa-users"> </i>
+                            </div>
+                            <div class="col-md-8 market-update-left">
+                                <h4>党员总人数</h4>
+                                <h3>235</h3>
+                                <p>本辖区党员总人数</p>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 market-update-gd">
+                        <div class="market-update-block clr-block-2">
+                            <div class="col-md-4 market-update-right">
+                                <i class="fa fa-eye"> </i>
+                            </div>
+                            <div class="col-md-8 market-update-left">
+                                <h4>党建访问量</h4>
+                                <h3>13,560</h3>
+                                <p>使用智慧党建的访问次数</p>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 market-update-gd">
+                        <div class="market-update-block clr-block-3">
+                            <div class="col-md-4 market-update-right">
+                                <i class="fa fa-cny"></i>
+                            </div>
+                            <div class="col-md-8 market-update-left">
+                                <h4>党费总额度</h4>
+                                <h3>11,528</h3>
+                                <p>通过智慧党建缴纳的党费总额</p>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <!-- tasks -->
+                <div class="agile-last-grids">
+                    <div class="col-md-4 agile-last-left agile-last-middle">
+                        <div class="agile-last-grid">
+                            <div class="area-grids-heading">
+                                <h3>目前党组成员构成</h3>
+                            </div>
+                            <div id="graph8"></div>
+                            <script>
+                                /* data stolen from http://howmanyleft.co.uk/vehicle/jaguar_'e'_type */
+                                var day_data = [//235
+                                    {"period": "正式党员", "licensed": 156,"sorned":0},
+                                    {"period": "预备党员", "licensed": 60,"sorned":0},
+                                    {"period": "发展对象", "licensed": 50,"sorned":0},
+                                    {"period": "积极分子", "licensed": 9,"sorned":0}
+                                ];
+                                Morris.Bar({
+                                    element: 'graph8',
+                                    data: day_data,
+                                    xkey: 'period',
+                                    ykeys: ['licensed'],
+                                    labels: ['数量',''],
+                                    xLabelAngle: 60
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <div class="col-md-4 agile-last-left">
+                        <div class="agile-last-grid">
+                            <div class="area-grids-heading">
+                                <h3>党组织分布情况</h3>
+                            </div>
+                            <div id="graph4"></div>
+                            <script>
+                                Morris.Donut({
+                                    element: 'graph4',
+                                    data: [
+                                        {value: 70, label: '街道办党工委', formatted: '70%' },
+                                        {value: 15, label: '社区党支部', formatted: '15%' },
+                                        {value: 10, label: '企业党支部', formatted: '10%' },
+                                        {value: 5, label: '学校党支部', formatted: '5%' }
+                                    ],
+                                    formatter: function (x, data) { return data.formatted; }
+                                });
+                            </script>
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 agile-last-left agile-last-right">
+                        <div class="agile-last-grid">
+                            <div class="area-grids-heading">
+                                <h3>2017年党建活动统计(次数)</h3>
+                            </div>
+                            <div id="graph9"></div>
+                            <script>
+                                var day_data = [
+                                    {"elapsed": "I", "value": 34,"ms": "第一季度"},
+                                    {"elapsed": "I", "value": 10,"ms": "第二季度"},
+                                    {"elapsed": "I", "value": 36,"ms": "第三季度"},
+                                    {"elapsed": "I", "value": 42,"ms": "第四季度"}
+                                ];
+                                Morris.Line({
+                                    element: 'graph9',
+                                    data: day_data,
+                                    xkey: 'ms',
+                                    ykeys: ['value'],
+                                    labels: ['数量'],
+                                    parseTime: false
+                                });
+                            </script>
+
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+                <!-- //tasks -->
+                <div class="agileits-w3layouts-stats">
+                    <div class="col-md-4 stats-info widget">
+                        <div class="stats-info-agileits">
+                            <div class="stats-title">
+                                <h4 class="title">党员分析</h4>
+                            </div>
+                            <div class="stats-body">
+                                <ul class="list-unstyled">
+                                    <li>正式党员占比 <span class="pull-right">85%</span>
+                                        <div class="progress progress-striped active progress-right">
+                                            <div class="bar green" style="width:85%;"></div>
+                                        </div>
+                                    </li>
+                                    <li>基层党员占比 <span class="pull-right">35%</span>
+                                        <div class="progress progress-striped active progress-right">
+                                            <div class="bar yellow" style="width:35%;"></div>
+                                        </div>
+                                    </li>
+                                    <li>本科以上学历党员 <span class="pull-right">25%</span>
+                                        <div class="progress progress-striped active progress-right">
+                                            <div class="bar red" style="width:78%;"></div>
+                                        </div>
+                                    </li>
+                                    <li>大专以上党员 <span class="pull-right">60%</span>
+                                        <div class="progress progress-striped active progress-right">
+                                            <div class="bar blue" style="width:50%;"></div>
+                                        </div>
+                                    </li>
+                                    <li>干部党员占比 <span class="pull-right">20%</span>
+                                        <div class="progress progress-striped active progress-right">
+                                            <div class="bar light-blue" style="width:80%;"></div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8 stats-info stats-last widget-shadow">
+                        <div class="stats-info-agileits">
+                            <div class="stats-title">
+                                <h4 class="title">党员分析</h4>
+                            </div>
+                            <div class="stats-body">
+                                <table class="table stats-table ">
+                                    <thead>
+                                    <tr>
+                                        <th>编号</th>
+                                        <th>学习内容</th>
+                                        <th>状态</th>
+                                        <th>参与率</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>党建基础知识学习月活动</td>
+                                        <td><span class="label label-success">报名中</span></td>
+                                        <td><h5>85% <i class="fa fa-level-up"></i></h5></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">2</th>
+                                        <td>两学一做</td>
+                                        <td><span class="label label-warning">进行中</span></td>
+                                        <td><h5>35% <i class="fa fa-level-up"></i></h5></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">3</th>
+                                        <td>党性教育</td>
+                                        <td><span class="label label-info">已完成</span></td>
+                                        <td><h5 class="down">10% <i class="fa fa-level-down"></i></h5></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">4</th>
+                                        <td>学习宣传十九大</td>
+                                        <td><span class="label label-info">已完成</span></td>
+                                        <td><h5>100% <i class="fa fa-level-up"></i></h5></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="clearfix"> </div>
+                </div>
+            </section>
+        </section>
+    </section>
+</body>
+
+<!--<script src="../js/sjtj.js?v=1.0"></script>-->
+</html>

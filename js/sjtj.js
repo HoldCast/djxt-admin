@@ -9,7 +9,7 @@ function jgsjtj() {
     // 指定图表的配置项和数据
     option = {
         title : {
-            text: '双桥子街道党员文化程度分类',
+            text: '党员文化程度分类',
             subtext: '统计数据',
             x:'center'
         },

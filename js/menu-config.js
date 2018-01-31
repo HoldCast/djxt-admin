@@ -7,6 +7,12 @@ var homeMenu = [
         children: []                //子目录
     },
     {
+        name: '统计分析',
+        type: 'tjfx',
+        icon: 'fa-bar-chart-o' ,
+        children: []
+    },
+    {
         name: '组织机构',
         icon: 'fa-sitemap',
         children: [
@@ -50,7 +56,7 @@ var homeMenu = [
     },
     {
         name: '居民议事',
-        icon: 'fa-bar-chart-o',
+        icon: 'fa-list-alt',
         children: [
             {name: '议题受理情况',url: 'html/debug.html'},
             {name: '议题审查情况',url: 'html/debug.html'},
