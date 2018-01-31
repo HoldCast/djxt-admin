@@ -44,7 +44,7 @@ var homeMenu = [
     {
         name: '党员服务',
         icon: 'fa-tasks',
-        type: 'debug'
+        type: 'dyfw'
     },
     {
         name: '党员活动',
