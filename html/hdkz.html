@@ -33,11 +33,11 @@
     <!--右边内容-->
     <section id="main-content">
         <section class="wrapper" id="wrapper">
-            <h3 class="main-title" id="mainTitle">党员服务</h3>
+            <h3 class="main-title" id="mainTitle">活动开展</h3>
             <div>
                 <div class="col-sm-5 m-b-xs">
                     <button id="addRdjjfz" class="btn btn-sm btn-primary" data-toggle="modal" data-target="#addInfoModal">
-                        开展服务
+                        开展活动
                     </button>
                 </div>
                 <div class="col-sm-4 text-left">
@@ -49,16 +49,16 @@
                     <thead>
                     <tr>
                         <th>序号</th>
-                        <th>服务类型</th>
-                        <th>服务类型说明</th>
-                        <th>服务时间</th>
+                        <th>活动类型</th>
+                        <th>开展单位</th>
+                        <th>召开时间</th>
                         <th>操作</th>
                     </thead>
                     <tbody>
                     <tr data-expanded="true">
                         <td>1</td>
-                        <td>圆梦天使</td>
-                        <td>对社区内困难家庭帮扶资助,进行救助困难服务</td>
+                        <td>支部会议</td>
+                        <td>新华社区党支部</td>
                         <td>2017-12-31</td>
                         <td>
                             <span><button class="btn btn-default btn-sm edit">编辑</button></span>
@@ -94,33 +94,35 @@
 <div class="modal fade bs-example-modal-lg" id="addInfoModal" tabindex="-1" role="dialog"
      aria-labelledby="myLargeModalLabel">
     <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content">
+        <form class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="modalTitle">党员服务开展</h4>
+                <h4 class="modal-title" id="modalTitle">活动开展</h4>
             </div>
-            <form class="modal-body">
-                <form class="form-horizontal">
-                    <div class="modal-sub-title">党员服务信息</div>
+            <div class="modal-body">
+                <div     class="form-horizontal">
+                    <div class="modal-sub-title">活动开展信息</div>
                     <div class="form-group clearfix modal-form type1">
                         <div class="form-item1 pull-left">
-                            <span class="pre">服务类型</span>
+                            <span class="pre">活动类型</span>
                             <select class="l200" name="">
-                                <option value="圆梦天使">圆梦天使</option>
-                                <option value="夕阳呵护">夕阳呵护</option>
-                                <option value="牵手行动">牵手行动</option>
-                                <option value="共享蓝天">共享蓝天</option>
-                                <option value="企业关怀">企业关怀</option>
-                                <option value="安全互动">安全互动</option>
-                                <option value="法律咨询">法律咨询</option>
-                                <option value="医疗服务">医疗服务</option>
-                                <option value="创业就业">创业就业</option>
+                                <option value="党会大会">党会大会</option>
+                                <option value="党小组会议">党小组会议</option>
+                                <option value="支部会议">支部会议</option>
                             </select>
                         </div>
                         <div class="form-item1 pull-left">
                             <span class="pre">活动日期</span>
                             <input type="text" class="form_date l200">
+                        </div>
+                        <div class="form-item1 pull-left">
+                            <span class="pre">支持人</span>
+                            <input type="text" class="l200">
+                        </div>
+                        <div class="form-item1 pull-left">
+                            <span class="pre">记录人</span>
+                            <input type="text" class="l200">
                         </div>
                         <div class="form-item1 pull-left">
                             <span class="pre">活动地点</span>
@@ -138,18 +140,14 @@
                             <span class="pre">活动内容</span>
                             <textarea name="" id="" style="width:660px;height:80px;"></textarea>
                         </div>
-                        <div class="form-item1 pull-left">
-                            <span class="pre">活动照片</span>
-                            <input type="file" style="width:660px;display: inline">
-                        </div>
                     </div>
-                </form>
+                </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                 <button type="button" class="btn btn-primary" data-dismiss="modal" id="saveAddzzjg">确定</button>
             </div>
         </div>
-    </div>
+    </form>
 </div>
 
 </body>
