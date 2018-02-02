@@ -33,10 +33,8 @@
     <!--右边内容-->
     <section id="main-content">
         <section class="wrapper" id="wrapper">
-            <h3 class="main-title" id="mainTitle">活动情况统计(次数)</h3>
+            <h3 class="main-title" id="mainTitle">召开居民议事会表决情况与决议公告</h3>
             <div>
-                <div class="col-sm-5 m-b-xs">
-                </div>
                 <div class="col-sm-4 text-left">
 
                 </div>
@@ -46,38 +44,25 @@
                     <thead>
                     <tr>
                         <th>序号</th>
-                        <th>开展单位</th>
-                        <th>所属年度</th>
-                        <th>党员大会</th>
-                        <th>总支会议</th>
-                        <th>党小组会议</th>
-                        <th>上党课</th>
-                        <th>党员学习</th>
+                        <th>状态</th>
+                        <th>组织名称</th>
+                        <th>会议次数</th>
+                        <th>受理时间</th>
+                        <th>议题编号</th>
+                        <th>议题题目</th>
+                        <th>提出人</th>
                         <th>操作</th>
                     </thead>
                     <tbody>
                     <tr data-expanded="true">
                         <td>1</td>
-                        <td>新鸿社区党委</td>
-                        <td>2017</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>3</td>
-                        <td>1</td>
-                        <td>0</td>
-                        <td>
-                            <span><button class="btn btn-default btn-sm edit">编辑</button></span>
-                        </td>
-                    </tr>
-                    <tr data-expanded="true">
-                        <td>2</td>
-                        <td>新华社区党总支</td>
-                        <td>2017</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>2</td>
-                        <td>2</td>
-                        <td>0</td>
+                        <td>已受理</td>
+                        <td>新华社区党支部</td>
+                        <td>第1次</td>
+                        <td>2017-12-31</td>
+                        <td>2017年第8号</td>
+                        <td>关于社区居民健康关注......</td>
+                        <td>蔡书记</td>
                         <td>
                             <span><button class="btn btn-default btn-sm edit">编辑</button></span>
                         </td>
@@ -116,46 +101,50 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                         aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="modalTitle">活动开展</h4>
+                <h4 class="modal-title" id="modalTitle">居民议事会议题添加</h4>
             </div>
             <div class="modal-body">
                 <div     class="form-horizontal">
-                    <div class="modal-sub-title">活动开展信息</div>
+                    <div class="modal-sub-title">议题信息</div>
                     <div class="form-group clearfix modal-form type1">
                         <div class="form-item1 pull-left">
-                            <span class="pre">活动类型</span>
-                            <select class="l200" name="">
-                                <option value="党员大会">党员大会</option>
-                                <option value="党小组会议">党小组会议</option>
-                                <option value="支部会议">支部会议</option>
-                            </select>
+                            <span class="pre">所属次数</span>
+                            <input type="text" style="width:156px;">
                         </div>
                         <div class="form-item1 pull-left">
-                            <span class="pre">活动日期</span>
-                            <input type="text" class="form_date l200">
+                            <span class="pre">提出日期</span>
+                            <input type="text" readonly class="form_date" style="width:156px;">
                         </div>
                         <div class="form-item1 pull-left">
-                            <span class="pre">支持人</span>
+                            <span class="pre">议题编号</span>
+                            <input type="text" style="width:156px;">
+                        </div>
+                        <div class="form-item1 pull-left">
+                            <span class="pre">议题题目</span>
+                            <input type="text" style="width:660px;">
+                        </div>
+                        <div class="form-item1 pull-left">
+                            <span class="pre">提出人</span>
                             <input type="text" class="l200">
                         </div>
                         <div class="form-item1 pull-left">
-                            <span class="pre">记录人</span>
+                            <span class="pre">联系电话</span>
                             <input type="text" class="l200">
                         </div>
                         <div class="form-item1 pull-left">
-                            <span class="pre">活动地点</span>
+                            <span class="pre">受理人</span>
+                            <input type="text" class="l200">
+                        </div>
+                        <div class="form-item1 pull-left">
+                            <span class="pre">联系电话</span>
+                            <input type="text" class="l200">
+                        </div>
+                        <div class="form-item1 pull-left">
+                            <span class="pre">附议人</span>
                             <input type="text" style="width:660px;">
                         </div>
                         <div class="form-item1 pull-left">
-                            <span class="pre">活动主题</span>
-                            <input type="text" style="width:660px;">
-                        </div>
-                        <div class="form-item1 pull-left">
-                            <span class="pre">参加人员</span>
-                            <input type="text" style="width:660px;">
-                        </div>
-                        <div class="form-item1 pull-left">
-                            <span class="pre">活动内容</span>
+                            <span class="pre">主要内容</span>
                             <textarea name="" id="" style="width:660px;height:80px;"></textarea>
                         </div>
                     </div>

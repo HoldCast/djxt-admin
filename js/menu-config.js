@@ -58,13 +58,13 @@ var homeMenu = [
         name: '居民议事',
         icon: 'fa-list-alt',
         children: [
-            {name: '议题受理情况',type: 'debug'},
-            {name: '议题审查情况',type: 'debug'},
-            {name: '会议公告信息',type: 'debug'},
-            {name: '会议通知信息',type: 'debug'},
-            {name: '表决决议公告',type: 'debug'},
-            {name: '实施结果公告',type: 'debug'},
-            {name: '实施结果季度公告',type: 'debug'},
+            {name: '议题受理情况',type: 'ytslqk'},
+            {name: '议题审查情况',type: 'ytscqk'},
+            {name: '会议公告信息',type: 'hyggxx'},
+            {name: '会议通知信息',type: 'hytzxx'},
+            {name: '表决决议公告',type: 'bjjygg'},
+            {name: '实施结果公告',type: 'ssjggg'},
+            {name: '实施结果季度公告',type: 'ssjgjdggg'}
         ]
     }
 ];

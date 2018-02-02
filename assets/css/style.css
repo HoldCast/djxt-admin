@@ -263,8 +263,13 @@ a.logo span {
 }
 .notify-row {
     float:left;
-    margin-top:23px;
-    margin-left:25px;
+    /* margin-top: 23px; */
+    /* margin-left: 25px; */
+    height: 80px;
+    line-height: 80px;
+    margin-left: 25px;
+    color: #666;
+    font-size: 14px;
 }
 ul.top-menu {
     margin-right:15px;
