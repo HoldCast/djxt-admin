@@ -64,7 +64,7 @@ var homeMenu = [
             {name: '会议通知信息',type: 'hytzxx'},
             {name: '表决决议公告',type: 'bjjygg'},
             {name: '实施结果公告',type: 'ssjggg'},
-            {name: '实施结果季度公告',type: 'ssjgjdggg'}
+            {name: '实施结果季度公告',type: 'ssjgjdgg'}
         ]
     }
 ];
