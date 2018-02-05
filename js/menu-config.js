@@ -56,7 +56,7 @@ var homeMenu = [
     },
     {
         name: '居民议事',
-        icon: 'fa-list-alt',
+        icon: 'fa-comments-o',
         children: [
             {name: '议题受理情况',type: 'ytslqk'},
             {name: '议题审查情况',type: 'ytscqk'},
@@ -65,6 +65,33 @@ var homeMenu = [
             {name: '表决决议公告',type: 'bjjygg'},
             {name: '实施结果公告',type: 'ssjggg'},
             {name: '实施结果季度公告',type: 'ssjgjdgg'}
+        ]
+    },
+    {
+        name: '信息要闻',
+        icon: 'fa-list-alt',
+        children: [
+            {name: '党建要闻',type: 'djyw'},
+            {name: '党务公开',type: 'dwgk'},
+            {name: '街道动态',type: 'jddt'}
+        ]
+    },
+    {
+        name: '党员e家',
+        icon: 'fa-compass',
+        children: [
+            {name: '党务知识',type: 'dwzs'},
+            {name: '党建视频',type: 'djsp'},
+            {name: '爱心救助',type: 'axjz'},
+            {name: '志愿活动',type: 'zyhd'}
+        ]
+    },
+    {
+        name: '用户管理',
+        icon: 'fa-user',
+        children: [
+            {name: '普通用户管理',type: 'ptyhgl'},
+            {name: '管理员用户管理',type: 'glyyhgl'}
         ]
     }
 ];
