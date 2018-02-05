@@ -5,10 +5,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="" />
 <link rel="icon" href="../images/favicon2.ico">
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- bootstrap-css -->
 <link rel="stylesheet" href="../assets/css/bootstrap.min.css" >
-<!-- //bootstrap-css -->
 <!-- Custom CSS -->
 <link href="../assets/css/style.css" rel='stylesheet' type='text/css' />
 <link href="../assets/css/style-responsive.css" rel="stylesheet"/>
@@ -23,32 +21,29 @@
 	.w3layouts-main{
 		color: #fff !important;
 	}
+	.login-btn{
+		background: #ea0908 !important;
+	}
 </style>
-<!-- //font-awesome icons -->
-<script src="../assets/bootstrap/jquery2.0.3.min.js"></script>
 </head>
 <body>
 <div class="log-w3">
-<div class="w3layouts-main">
-	<h2 style="color: #fff;">党建管理中心</h2>
-	<form action="" method="post">
-		<input type="text" value="201801181705" class="ggg" name="user" placeholder="用户名">
-		<input type="password" value="123456" class="ggg" name="password" placeholder="密码" required="">
-		<span>
-			<input type="checkbox" checked />记住密码</span>
-		<h6><a href="#">忘记密码?</a></h6>
-			<div class="clearfix"></div>
-			<input style="background: #0B61A4" type="submit" id="login" value="登录" name="login">
-	</form>
-	<p>还未注册账号?<a href="registration.html">注册</a></p>
+	<div class="w3layouts-main">
+		<h2 style="color: #fff;">党建管理中心</h2>
+		<form action="" method="post">
+			<input type="text" value="201801181705" class="ggg" name="user" placeholder="用户名">
+			<input type="password" value="123456" class="ggg" name="password" placeholder="密码" required="">
+			<span>
+				<input type="checkbox" checked />记住密码</span>
+			<h6><a href="#">忘记密码?</a></h6>
+				<div class="clearfix"></div>
+				<input class="login-btn" type="submit" id="login" value="登录" name="login">
+		</form>
+		<p>还未注册账号?<a href="javascript:;">注册</a></p>
+	</div>
 </div>
-</div>
+<script src="../assets/bootstrap/jquery2.0.3.min.js"></script>
 <script src="../assets/bootstrap/bootstrap.js"></script>
-<script src="../assets/bootstrap/jquery.dcjqaccordion.2.7.js"></script>
-<script src="../assets/bootstrap/scripts.js"></script>
-<script src="../assets/bootstrap/jquery.slimscroll.js"></script>
-<script src="../assets/bootstrap/jquery.nicescroll.js"></script>
-<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/flot-chart/excanvas.min.js"></script><![endif]-->
 <script src="../assets/bootstrap/jquery.scrollTo.js"></script>
 <script>
 	$('#login').click(function () {
