@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<head>
+    <title>党建管理中心</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content=""/>
+    <link rel="icon" href="../images/favicon2.ico">
+    <!-- bootstrap-css -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap-datetimepicker.min.css">
+    <!-- Custom CSS -->
+    <link href="../assets/css/style.css" rel='stylesheet' type='text/css'/>
+    <link href="../assets/css/style-responsive.css" rel="stylesheet"/>
+    <!-- font-awesome icons -->
+    <link rel="stylesheet" href="../assets/css/font.css" type="text/css"/>
+    <link href="../assets/css/font-awesome.css" rel="stylesheet">
+    <!-- self -->
+    <link rel="stylesheet" href="../css/common.css?v=1.0">
+    <link rel="stylesheet" href="../css/sjtj.css?v=1.0">
+</head>
+<body style="background:#f9f9f9;">
+<section id="container">
+    <!--顶部-->
+    <header class="header fixed-top clearfix" id="commonHeader"></header>
+    <!--左边菜单-->
+    <aside>
+        <div id="sidebar" class="nav-collapse">
+            <div class="leftside-navigation">
+                <ul class="sidebar-menu" id="nav-accordion"></ul>
+            </div>
+        </div>
+    </aside>
+    <!--右边内容-->
+    <section id="main-content">
+        <section class="wrapper" id="wrapper">
+            <h3 class="main-title" id="mainTitle">账号设置</h3>
+            <div>
+                <form class="form-horizontal">
+                    <div class="form-group">
+                        <label for="zh" class="col-sm-2 control-label">账号</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="zh">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="xm" class="col-sm-2 control-label">姓名</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="xm">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="xb" class="col-sm-2 control-label">性别</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="xb">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-8 text-center">
+                            <button type="submit" class="btn btn-primary">确认修改</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </section>
+</section>
+
+<!-- 党费评议模态框 -->
+<div class="modal fade bs-example-modal-lg" id="addInfoModal" tabindex="-1" role="dialog"
+     aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-lg" role="document">
+        <form class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalTitle">爱心救助</h4>
+            </div>
+            <div class="modal-body">
+                <div     class="form-horizontal">
+                    <div class="modal-sub-title">爱心救助</div>
+                    <div class="form-group clearfix modal-form type1">
+                        <div class="form-item1 pull-left">
+                            <span class="pre">标题</span>
+                            <input type="text" style="width:660px;">
+                        </div>
+                        <div class="form-item1 pull-left">
+                            <span class="pre">内容</span>
+                            <textarea name="" id="" style="width:660px;height:80px;"></textarea>
+                        </div>
+                    </div>
+                </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal" id="saveAddzzjg">确定</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+</body>
+<script src="../assets/bootstrap/jquery2.0.3.min.js"></script>
+<script src="../js/menu-config.js?v=1.0"></script>
+<script src="../js/function.js?v=1.0"></script>
+<script src="../js/common2.js?v=1.0"></script>
+<script src="../assets/bootstrap/bootstrap.js"></script>
+<script src="../assets/bootstrap/bootstrap-datetimepicker.js"></script>
+<script src="../assets/bootstrap/locales/bootstrap-datetimepicker.zh-CN.js"></script>
+<script src="../assets/bootstrap/jquery.dcjqaccordion.2.7.js"></script>
+<script src="../assets/bootstrap/jquery.scrollTo.js"></script>
+<script src="../assets/bootstrap/scripts.js"></script>
+<script src="../assets/bootstrap/jquery.slimscroll.js"></script>
+<script src="../assets/bootstrap/jquery.nicescroll.js"></script>
+<script src="../assets/bootstrap/raphael-min.js"></script>
+<script src="../assets/bootstrap/morris.js"></script>
+</html>

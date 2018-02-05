@@ -2,7 +2,6 @@ var homeMenu = [
     {
         name: '首页',                //名称
         type: 'home',
-        type: 'home',      //路径
         icon: 'fa-home' ,           //图标样式
         children: []                //子目录
     },
@@ -44,7 +43,9 @@ var homeMenu = [
     {
         name: '党员服务',
         icon: 'fa-tasks',
-        type: 'dyfw'
+        children: [
+            {name: '党员服务管理',type: 'dyfw'},
+        ]
     },
     {
         name: '党员活动',
@@ -90,8 +91,9 @@ var homeMenu = [
         name: '用户管理',
         icon: 'fa-user',
         children: [
-            {name: '普通用户管理',type: 'ptyhgl'},
-            {name: '管理员用户管理',type: 'glyyhgl'}
+            {name: '账号设置',type: 'zhsz'},
+            {name: '密码修改',type: 'mmxg'},
+            {name: '退出登录',type: 'login'}
         ]
     }
 ];
