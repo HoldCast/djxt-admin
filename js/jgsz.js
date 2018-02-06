@@ -1,5 +1,6 @@
 $(function () {
     zzjgTree();
+    addZzjg();
     $('.form_date').datetimepicker({
         format: 'yyyy-mm-dd hh:ii'
     });
@@ -60,4 +61,15 @@ function zzjgTree() {
     //初始化
     var treeObj = $.fn.zTree.init($("#zzjgTree"), setting, zNodes);
     $('#zzjgTree_1_a').click(); //选中第一个节点
+}
+//添加组织机构
+function addZzjg() {
+    $('#saveAddzzjg').off('click').on('click',function () {
+        var d = {};
+        var t = $('#zzjgForm').serializeArray();
+        $.each(t, function() {
+            d[this.name] = this.value;
+        });
+        console.log(d);
+    });
 }
