@@ -1,23 +1,27 @@
+var zzjgData = [
+    {id: 1, pId: 0, name: "双桥子街道党工委", open: true,checked: true},
+    {id: 11, pId: 1, name: "新鸿社区党委", lx: '街道社区党支部', gx: '新鸿社区', sj: '2003-11-08', open: true},
+    {id: 111, pId: 11, name: "居委会党支部", lx: '其他党支部', gx: '新鸿社区', sj: '2003-11-08', iconClose: true},
+    {id: 112, pId: 11, name: "电视台党支部", lx: '其他党支部', gx: '新鸿社区', sj: '2003-11-08'},
+    {id: 113, pId: 11, name: "印刷公司党支部", lx: '企业党支部', gx: '新鸿社区', sj: '2003-11-08'},
+    {id: 12, pId: 1, name: "猛追湾社区党委", lx: '社区党支部', gx: '猛追湾社区', sj: '2001-11-08', open: true},
+    {id: 121, pId: 12, name: "居委会党支部", lx: '其他党支部', gx: '猛追湾社区', sj: '2001-11-08'},
+    {id: 122, pId: 12, name: "国电党支部", lx: '企业党支部', gx: '猛追湾社区', sj: '2001-11-08',},
+    {id: 13, pId: 1, name: "沙河社区党委", lx: '社区党支部', gx: '沙河社区', sj: '2005-11-08'}
+];
+var nodeId = '';
+
+
 $(function () {
-    zzjgTree();
+    zzjgTree(zzjgData);
     addZzjg();
     $('.form_date').datetimepicker({
         format: 'yyyy-mm-dd hh:ii'
     });
 });
 
-function zzjgTree() {
-    var zNodes = [
-        {id: 1, pId: 0, name: "双桥子街道党工委", open: true,checked: true},
-        {id: 11, pId: 1, name: "新鸿社区党委", lx: '街道社区党支部', gx: '新鸿社区', sj: '2003-11-08', open: true},
-        {id: 111, pId: 11, name: "居委会党支部", lx: '其他党支部', gx: '新鸿社区', sj: '2003-11-08', iconClose: true},
-        {id: 112, pId: 11, name: "电视台党支部", lx: '其他党支部', gx: '新鸿社区', sj: '2003-11-08'},
-        {id: 113, pId: 11, name: "印刷公司党支部", lx: '企业党支部', gx: '新鸿社区', sj: '2003-11-08'},
-        {id: 12, pId: 1, name: "猛追湾社区党委", lx: '社区党支部', gx: '猛追湾社区', sj: '2001-11-08', open: true},
-        {id: 121, pId: 12, name: "居委会党支部", lx: '其他党支部', gx: '猛追湾社区', sj: '2001-11-08'},
-        {id: 122, pId: 12, name: "国电党支部", lx: '企业党支部', gx: '猛追湾社区', sj: '2001-11-08',},
-        {id: 13, pId: 1, name: "沙河社区党委", lx: '社区党支部', gx: '沙河社区', sj: '2005-11-08'}
-    ];
+function zzjgTree(zzjgData) {
+
     var setting = {
         view: {
             showIcon: showIconForTree
@@ -34,6 +38,7 @@ function zzjgTree() {
                 $('#zzjgTable').empty();
                 $('#zzjgTableName').text(name);
                 var tableData = treeNode.children;
+                nodeId = treeNode.id;
                 if(tableData && tableData.length){
                     for (var i = 0; i < tableData.length; i++) {
                         var tRow = tableData[i];
@@ -59,7 +64,7 @@ function zzjgTree() {
         //return !treeNode.isParent;
     };
     //初始化
-    var treeObj = $.fn.zTree.init($("#zzjgTree"), setting, zNodes);
+    var treeObj = $.fn.zTree.init($("#zzjgTree"), setting, zzjgData);
     $('#zzjgTree_1_a').click(); //选中第一个节点
 }
 //添加组织机构
